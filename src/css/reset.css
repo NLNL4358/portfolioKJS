@@ -1,0 +1,137 @@
+
+/* 평창평화체 */
+@font-face { font-family: 'PyeongChangPeace-Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2206-02@1.0/PyeongChangPeace-Bold.woff2') format('woff2'); font-weight: 300,700; font-style: normal; }
+
+/* 티머니 둥근바람 */
+@font-face { font-family: 'TmoneyRoundWindExtraBold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_20-07@1.0/TmoneyRoundWindExtraBold.woff') format('woff'); font-weight: normal, bold; font-style: normal; }
+
+/* 더 잠실체 */
+@font-face { font-family: 'TheJamsil5Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2'); font-weight: 100, 300, 400, 500, 700 , 800; font-style: normal; }
+
+/* 프리텐다드 */
+@font-face {
+  font-family: 'Pretendard-Regular';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 100,200,300,400,500,600,700,800;
+  font-style: normal;
+}
+
+/* Bebas, BlackOpsOne, Lobster */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Black+Ops+One&family=Lobster:wght@100;200;300;400;500;600;700;800;900&display=swap');
+
+*{
+  margin: 0px;
+  padding: 0px;
+  list-style: none;
+  color : #333;
+  text-decoration: none;
+  font-family: "Pretendard-Regular";
+  box-sizing: border-box;
+
+  font-size : 15px;
+  pointer-events : auto;
+}
+section{
+  background-color: white;
+}
+
+:root{
+
+  /* size - html 기본값 15px 기준*/
+  --h1-size: 3.73rem; /* 56px; */
+  --h2-size: 3.0rem;/* 45px */
+  --h3-size: 2.47rem;/* 37px */
+  --h4-size: 1.87rem;/* 28px */
+  --h5-size: 1.6rem;/* 24px */
+  --p-size: 1.40rem;/* 21px */
+  --span-size: 1.20rem;/* 18px */
+  --body-size: 1.0rem;/* 15px */
+  --small-size: 0.87rem; /* 13px */
+  /* color */
+  --point-color1 : #3E3986;
+  --point-color2 : #A7A8FF;
+  --border-color1 : #BBB;
+  --button-color1 : #FF862F;
+  --button-color2 : #FF5E18;
+
+}
+
+.inner{
+  width: calc(1920px - (100vw - 100%));
+  /* width: 1903.4px; */
+
+  height: 100vh;
+}
+
+
+h1{
+  /* 56px */
+  font-size: var(--h1-size);
+  font-weight: bold;
+}
+h2{
+  /* 45px */
+  font-size: var(--h2-size);
+  font-weight: bold;
+}
+h3{
+  /* 37px */
+  font-size: var(--h3-size);
+  font-weight: 500;
+}
+h4{
+  /* 28px */
+  font-size: var(--h4-size);
+  font-weight: 500;
+}
+h5{
+  /* 24px */
+  font-size: var(--h5-size);
+  font-weight: 500;
+}
+p{
+  /* 21px */
+  font-size : var(--p-size);
+  font-weight: 500;
+}
+span{
+  /* 18px */
+  font-size: var(--span-size);
+  font-weight: 500;
+
+}
+
+body{
+  /* 15px */
+  font-size: var(--body-size);
+  font-weight: 500;
+}
+
+small{
+  /* 12px */
+  font-size: var(--small-size);
+  font-weight: 300;
+}
+
+button{
+  background-color: transparent;
+  border: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  cursor: pointer;
+}
+
+point{
+  color : var(--point-color1);
+}
+point2{
+  color : var(--point-color2);
+}
+
+
+@media screen and (min-width : 1920px) {
+  .inner{
+    width : 100%
+  }
+}
