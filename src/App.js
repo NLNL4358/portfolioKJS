@@ -13,7 +13,8 @@ import Portfolio from './page/Portfolio'
 
 
 function App() {
-  const [index, setIndex] = useState();
+  /* 목차 정하는용 */
+  const [index, setIndex] = useState(0);
 
 
   return (

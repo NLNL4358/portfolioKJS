@@ -1,4 +1,121 @@
 .SideComponent{
   width: 19%;
   height: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+
+  border-right: 2px dotted #66666660;
+}
+.sideComponentImageWrap{
+  width: 170px;
+  height: 170px;
+  margin-top: 50px;
+}
+.sideComponentImage{
+  width: 100%;
+  height: 100%;
+}
+.sideComponentNameWrap{
+  margin-bottom: 30px;
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 78px;
+  padding: 0px 16px;
+}
+.sideComponentBackgroundName{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  top: 0;
+  left: 50%;
+  transform: translate(-50%);
+  color: #EEEDF2;
+}
+.sideComponentName{
+  width: 100%;
+  text-align: center;
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.sideComponentIndexWrap{
+  /* margin-top: 90px; */
+  margin-bottom: 150px;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.sideComponentIndex{
+  font-size: var(--span-size);
+  padding: 10px 0px;
+  color: #A7A8FF;
+  opacity: 0.6;
+  font-weight: 900;
+  cursor: pointer;
+
+
+  position: relative;
+}
+  .sideComponentIndex:hover{
+    opacity: 1;
+  }
+  .sideComponentIndex.target{
+    font-size: var(--h5-size);
+    color: #3E3986;
+    opacity: 1;
+  }
+  .sideComponentIndex.target::before{
+    content: "";
+    position: absolute;
+    background-color: #3E3986;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+    left: -10px;
+    top: 50%;
+
+    transform: translate(-50%,-50%);
+  }
+
+
+.sideComponentBottomWrap{
+  /* margin-top: 160px; */
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+
+}
+.gitHubLogoWrap{
+  width: 100%;
+  height: 32px;
+  text-align: center;
+}
+.gitHubLogoLink{
+  display: block;
+  margin: auto;
+  width: 121px;
+  height: 100%;
+}
+.gitHubLogoImage{
+  width: 100%;
+  height: 100%;
+}
+.sideComponentTelNumber, .sideComponentEmail{
+  color: #666;
+}
+.sideComponentTelNumber{
+  margin: 15px 0px 5px 0px;
 }

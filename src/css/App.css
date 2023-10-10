@@ -3,3 +3,20 @@
   justify-content: space-between;
   align-items: center;
 }
+
+.Jamsil{
+  font-family: 'TheJamsil5Bold';
+}
+
+.Lobster{
+  font-family: 'Lobster';
+  font-weight: 100;
+}
+.Bebas{
+  font-family : 'Bebas Neue', cursive;
+}
+
+.contents_inner{
+  width: 81%;
+  height: 100%;
+}
