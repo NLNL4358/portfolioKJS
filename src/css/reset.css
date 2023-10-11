@@ -8,10 +8,17 @@
 /* 더 잠실체 */
 @font-face { font-family: 'TheJamsil5Bold'; src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2302_01@1.0/TheJamsil5Bold.woff2') format('woff2'); font-weight: 100, 300, 400, 500, 700 , 800; font-style: normal; }
 
+
 /* 프리텐다드 */
 @font-face {
   font-family: 'Pretendard-Regular';
   src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-Regular.woff') format('woff');
+  font-weight: 100,200,300,400,500,600,700,800;
+  font-style: normal;
+}
+@font-face {
+  font-family: 'Pretendard-ExtraBold';
+  src: url('https://cdn.jsdelivr.net/gh/Project-Noonnu/noonfonts_2107@1.1/Pretendard-ExtraBold.woff') format('woff');
   font-weight: 100,200,300,400,500,600,700,800;
   font-style: normal;
 }
@@ -63,7 +70,6 @@ section{
   height: 100vh;
 }
 
-
 h1{
   /* 56px */
   font-size: var(--h1-size);
@@ -112,6 +118,11 @@ small{
   font-size: var(--small-size);
   font-weight: 300;
 }
+
+.boldPretendard{
+  font-family: 'Pretendard-ExtraBold';
+}
+
 
 button{
   background-color: transparent;

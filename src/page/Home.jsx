@@ -1,21 +1,22 @@
 import React from 'react'
 import '../css/Home.css'
-import {useState ,useEffect} from 'react'
-import {useNavigate} from 'react-router-dom'
+import {useState ,useEffect, useRef} from 'react'
 
-const Home = () => {
-  const navigate = useNavigate();
+
+/* props 로 가져온것 setIndex */
+const Home = (props) => {
   const goToAboutPage = (event)=>{
     event.preventDefault();
-    navigate("/About");
+
+    props.setIndex(1);
   }
   const [typingText, setTypingText] = useState("");
 
   /* 타이핑 효과 */
   const letters = [
+    "효율적인",
     "창의적인",
     "도전적인",
-    "효율적인",
     "책임있는",
     "성장하는"
   ]
@@ -61,16 +62,34 @@ const Home = () => {
   }
     
 
+  /* 스크롤 액션 */
+  const HomeRef = useRef();
   useEffect(()=>{
-    // 초기 실행
+    // 초기 타이핑 실행
     typing();
-  },[])
-  
+    const HomeRefCurrent = HomeRef.current;
+    setTimeout(() => {
+      /* 핸들러 달아주기 */
+      const wheelHandler = (e) =>{
+        e.preventDefault();
+        const { deltaY } = e;
 
+        if(deltaY > 0){
+          /* 스크롤내릴때 */
+          console.log("scroll Down");
+          props.setIndex(1);
+        }
+      }
+      HomeRefCurrent.addEventListener("wheel", wheelHandler);
+      return () => {
+        HomeRefCurrent.removeEventListener("wheel", wheelHandler);
+      };
+    },1000)
+  },[])
 
 
   return (
-    <div className='Home contents_inner'>
+    <div ref={HomeRef} className='Home contents_inner'>
       <div className="HomeLeftWrap">
         <h1 className='HomeTextMyName Jamsil'>{'강진수 :)'}</h1>
         {
@@ -89,11 +108,13 @@ const Home = () => {
           <p className='HomeTextSubText'>지금부터 제가 가진 역량과</p>
           <p className='HomeTextSubText'>완성한 작업물을 소개해 드리겠습니다.</p>
         </div>
-        <img className='HomePointArrow' src="/image/PointArrow.png" alt="" />
+        <img className='HomePointArrow' src="/image/Home/PointArrow.png" alt="" />
         <button onClick={(event)=>(goToAboutPage(event))} className='HomeMoreButton'>더 알아보기</button>
       </div>
       <div className="HomeRightWrap">
-
+        <div className="HomeRightImageWrap">
+          <img className='HomeRightImage' src="/image/Home/homeHumanImage.svg" alt="" />
+        </div>
       </div>
     </div>
   )

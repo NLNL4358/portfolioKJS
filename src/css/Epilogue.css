@@ -1,0 +1,56 @@
+.EpilogueContentsWrap{
+  margin: auto;
+  margin-top: 60px;
+  width: 1280px;
+  height: 670px;
+
+  display: block;
+}
+
+.EpilogueTopDOM, .EpilogueBottomDOM{
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+.EpilogueTopDOM h4{
+  margin-right: 7px;
+}
+.EpilogueCrimeColor{
+  color: #FB186A;
+}
+.EpilogueGreenColor{
+  color: #8EE51E;
+}
+.EpilogueYellowColor{
+  color: #FFAE35;
+}
+
+.EpilogueTextWrap{
+  margin: 20px 0px;
+}
+.EpilogueRows{
+  margin: auto;
+  width: calc(100% - 120px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.EpilogueRows p{
+  color: #91B3E7;
+}
+.EpilogueRows .EpilogueWrapInRow p{
+  color : #C4D8F5;
+}
+
+.size30{
+  font-size: 30px;
+}
+.size50{
+  font-size: 50px;
+}
+.size100{
+  font-size: 100px;
+}
+.size120{
+  font-size: 120px;
+}

@@ -1,11 +1,11 @@
 import React from 'react'
 import '../css/SideComponent.css'
 
-import {Link} from 'react-router-dom'
+import {Link, useNavigate} from 'react-router-dom'
 
 /* props로 받은 것 -  index , setIndex */
 const SideComponent = (props) => {
-
+  const navigate = useNavigate();
   const indexArray = [
     "Home",
     "About",
@@ -19,12 +19,14 @@ const SideComponent = (props) => {
     preventDefault를 해주어야한다. */
     event.preventDefault();
     props.setIndex(index);
-  }
+
+    index === 0 ? navigate('/') : navigate(`/${indexArray[index]}`);
+  } 
 
   return (
     <div className='SideComponent'>
       <div className="sideComponentImageWrap">
-        <img className='sideComponentImage' src="/image/sideComponentImage.png" alt="" />
+        <img className='sideComponentImage' src="/image/SideComponent/sideComponentImage.png" alt="" />
       </div>
       <div className="sideComponentNameWrap">
         <h1 className='sideComponentBackgroundName Lobster'>Kang Jin Soo</h1>
@@ -34,7 +36,7 @@ const SideComponent = (props) => {
       <div className="sideComponentIndexWrap">
         {
           indexArray.map((item, index)=>(
-            <div key={index} onClick={(event)=>(changeIndex(event,index))} className={`sideComponentIndex ${props.index === index ? "target" : ""}`}>
+            <div key={index} onClick={(event)=>(changeIndex(event,index))} className={`sideComponentIndex ${props.index === index ? "target" : ""} boldPretendard`}>
               {item}
             </div>
           ))
@@ -44,7 +46,7 @@ const SideComponent = (props) => {
       <div className="sideComponentBottomWrap">
         <div className="gitHubLogoWrap">
           <Link className='gitHubLogoLink' to='https://github.com/NLNL4358' target="_blank"> 
-            <img className='gitHubLogoImage' src="/image/GithubLogo.png" alt="" />
+            <img className='gitHubLogoImage' src="/image/SideComponent/GithubLogo.png" alt="" />
           </Link>
         </div>
 

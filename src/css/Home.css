@@ -69,10 +69,6 @@
     }
   } 
 
-.HomeRightWrap{
-  width: 50%;
-  height: 100%;
-}
 
 .HomePointBar{
   margin : 60px 0px;
@@ -129,3 +125,32 @@
 
     transform: translate(-50%, -100%);
   }
+
+.HomeRightWrap{
+  width: 50%;
+  height: 100%;
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.HomeRightImageWrap{
+  width: 695px;
+  height: 695px;
+  border-radius: 50%;
+  background-color: #F8DEB9;
+
+  position: relative;
+  overflow: hidden;
+}
+
+.HomeRightImage{
+  position: absolute;
+  width: 615px;
+  height: auto;
+
+  bottom: 0;
+  left: 46%;
+  transform: translate(-50%);
+}
