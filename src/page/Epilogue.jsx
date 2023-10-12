@@ -48,6 +48,7 @@ const Epilogue = (props) => {
           <h4 className='Jamsil'>=</h4>
           <h4 className='EpilogueYellowColor Jamsil'>{`"MyKeyWord"`}</h4>
           <h4 className='Jamsil'>{">"}</h4>
+          <div className="EpilogueTopDot"></div>
         </div>
 
         <div className="EpilogueTextWrap">
@@ -59,12 +60,38 @@ const Epilogue = (props) => {
               <p className='size50 Jamsil'>유지보수</p>
             </div>
           </div>
+          <div className="EpilogueRows EpilogueTextSecondRow">
+            <div className="EpilogueWrapInRow">
+              <p className='size30 Jamsil'>눈이 즐거운 웹</p>
+              <p className='size50 Jamsil'>사용자 배려 디자인</p>
+            </div>
+            <p className='size80 Jamsil'>트렌디한 디자인</p>
+          </div>
+          <div className="EpilogueRows EpilogueTextThirdRow">
+            <p className='size100 Jamsil'>성장하는 개발자</p>
+            <div className="EpilogueWrapInRow">
+              <p className='size30 Jamsil'>더 높은 완성도를 목표로</p>
+              <p className='size50 Jamsil'>피드백 환영</p>
+            </div>
+          </div>
+          <div className="EpilogueRows EpilogueTextForthRow">
+            <div className="EpilogueWrapInRow">
+              <p className='size50 Jamsil'>겸손한 신입의 자세</p>
+              <p className='size60 Jamsil'>성장의 기회</p>
+            </div>
+            <p className='size120 Jamsil'>오픈 마인드</p>
+          </div>
+          <div className="EpilogueRows EpilogueTextFifthRow">
+            <p className='size100 Jamsil'>배움이 고픈</p>
+            <p className='size120 Jamsil'>{`"`}</p>
+          </div>
         </div>
 
         <div className="EpilogueBottomDOM">
           <h4 className='Jamsil'>{"</"}</h4>
           <h4 className='EpilogueCrimeColor Jamsil'>div</h4>
           <h4 className='Jamsil'>{">"}</h4>
+          <div className="EpilogueBottomDot"></div>
         </div>
       </div>
     </div>

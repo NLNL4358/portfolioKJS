@@ -1,7 +1,7 @@
 import './css/App.css';
 import './css/reset.css';
 
-import {useState, useEffect} from 'react'
+import {useState, useEffect, useLayoutEffect} from 'react'
 import {Routes, Route, Link, useNavigate} from 'react-router-dom'
 
 import SideComponent from './component/SideComponent';
@@ -47,6 +47,25 @@ function App() {
     }
   },[index])
   
+
+  /* portfolio용 이미지를 미리 로드하자!! */
+  /* 이거... gif로 하면 너무 크다.. 그냥 이미지로하자  */
+  const portfolioImageArray = [ /* src */
+    "/image/Portfolio/cyphers.png",
+    "/image/Portfolio/everland.png",
+    "/image/Portfolio/jejuair.png"
+  ]
+
+  const images = new Array();
+  /* useLayoutEffect는 마운트 되기전에 가져오기때문에 useEffect보다 빠름 */
+  useLayoutEffect(()=>{
+    for( let i = 0 ; i < portfolioImageArray.length ; i++){
+      images[i] = new Image();
+      images[i].src = portfolioImageArray[i];  /* 이미지 미리 로딩 이러면 캐시에 존재해서 빠르게 로드될...껄?*/
+    }
+  },[])
+
+
   return (
     <div className="App inner">
       <SideComponent index={index} setIndex={(index)=>{setIndex(index)}}></SideComponent>
@@ -55,7 +74,7 @@ function App() {
         <Route path='/About' element={<About setIndex={(index)=>{setIndex(index)}}></About>}></Route>
         <Route path='/Skill' element={<MySkill setIndex={(index)=>{setIndex(index)}}></MySkill>}></Route>
         <Route path='/Epilogue' element={<Epilogue setIndex={(index)=>{setIndex(index)}}></Epilogue>}></Route>
-        <Route path='/Portfolio' element={<Portfolio setIndex={(index)=>{setIndex(index)}}></Portfolio>}></Route>
+        <Route path='/Portfolio' element={<Portfolio portfolioImageArray={portfolioImageArray} setIndex={(index)=>{setIndex(index)}}></Portfolio>}></Route>
       </Routes>
     </div>
   );

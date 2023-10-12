@@ -1,0 +1,93 @@
+.PortfolioContentsWrap{
+  width: 100%;
+  margin-top: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.PortfolioLeftMonitorSection{
+  margin-top: 50px;
+  width: 55%;
+  position: relative;
+}
+.PortFolioMonitorImage{
+  z-index: 5;
+  position: absolute;
+  left: 20px;
+  top: 50px;
+  width: 900px;
+}
+.PortfolioPageImageWrap{
+  margin: 85px 0px 0px 125px;
+  
+  width: 692px;
+  height: 381px;
+
+  overflow: hidden;
+  position: relative;
+}
+.PortfolioPageImageSlider{
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+
+  height: 100%;
+}
+.PortfolioPageImage{
+  width: 100%;
+  height: auto;
+}
+
+
+
+.PortfolioRightTextSection{
+  width: 45%;
+  min-height: 750px;
+}
+.PortfolioProjectTextWrap{
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+}
+.PortfolioProjectWrap{
+  position: absolute;
+  left: 0;
+  top: 0;
+  height: 100%;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  opacity: 0;
+}
+.PortfolioProjectWrap.target{
+  opacity: 1;
+}
+
+.PortfolioProjectName{
+  position: relative;
+}
+  .PortfolioProjectName::before{
+    position: absolute;
+    content: "";
+    width: 120%;
+    height: 100%;
+
+    background-color: #FFDF70;
+
+    top: 12px;
+    left: 50%;
+    transform: translate(-50%);
+
+    z-index: -5;
+  }

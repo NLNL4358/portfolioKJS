@@ -1,10 +1,12 @@
 .EpilogueContentsWrap{
   margin: auto;
-  margin-top: 60px;
+  margin-top: 80px;
   width: 1280px;
   height: 670px;
 
-  display: block;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .EpilogueTopDOM, .EpilogueBottomDOM{
@@ -15,6 +17,25 @@
 .EpilogueTopDOM h4{
   margin-right: 7px;
 }
+.EpilogueTopDot, .EpilogueBottomDot{
+  width: 100%;
+  height: 0px;
+  position: relative;
+}
+  .EpilogueTopDot::after, .EpilogueBottomDot::after{
+    content: "";
+    position: absolute;
+    left : 10px;
+    top : 50%;
+    transform: translate(0%, -50%);
+    border-bottom: 1px dotted #BBB;
+  }
+  .EpilogueTopDot::after{
+    width: 81%;
+  }
+  .EpilogueBottomDot::after{
+    width: 87.5%;
+  }
 .EpilogueCrimeColor{
   color: #FB186A;
 }
@@ -41,16 +62,135 @@
 .EpilogueRows .EpilogueWrapInRow p{
   color : #C4D8F5;
 }
-
+.EpilogueTextSecondRow .EpilogueWrapInRow p,
+.EpilogueTextForthRow .EpilogueWrapInRow p{
+  text-align: right;
+}
+.EpilogueTextFifthRow .size120{
+}
 .size30{
   font-size: 30px;
 }
 .size50{
   font-size: 50px;
 }
+.size60{
+  font-size: 60px;
+}
+.size80{
+  font-size: 80px;
+}
 .size100{
   font-size: 100px;
 }
 .size120{
   font-size: 120px;
+}
+
+
+/* 애니메이션 */
+/* 애니메이션은 우선 처음 1초는 페이지가 불러오는 시간이니 delay + 1 초는 기본 -> 0.5초가 적당한듯 */
+/* 그 후 하나씩 팝업되야하니 delay + 0.3 초? 0.2초 씩 미루면서 애니메이션을 넣어주자 */
+ /* 마지막상태 유지를 위해 fill-mode  : forwards */
+@keyframes epilogueTextPopUp {
+  0%{
+    opacity: 0;
+  }
+  100%{
+    opacity: 1;
+  }
+}
+.EpilogueContentsWrap p{
+  opacity: 0;
+  line-height: 97%;
+}
+.EpilogueTextThirdRow .size100{
+  animation-name: epilogueTextPopUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+.EpilogueTextFirstRow .size50{
+  animation-name: epilogueTextPopUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 0.7s;
+}
+.EpilogueTextSecondRow .size50{
+  animation-name: epilogueTextPopUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 0.9s;
+}
+.EpilogueTextForthRow .size120{
+  animation-name: epilogueTextPopUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 1.1s;
+}
+.EpilogueTextThirdRow .size50{
+  animation-name: epilogueTextPopUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 1.3s;
+}
+.EpilogueTextForthRow .size60{
+  animation-name: epilogueTextPopUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+}
+.EpilogueTextFirstRow .size120{
+  animation-name: epilogueTextPopUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 1.7s;
+}
+.EpilogueTextFirstRow .size100{
+  animation-name: epilogueTextPopUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 1.9s;
+}
+.EpilogueTextForthRow .size50{
+  animation-name: epilogueTextPopUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 2.1s;
+}
+.EpilogueTextSecondRow .size80{
+  animation-name: epilogueTextPopUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 2.2s;
+}
+.EpilogueTextFifthRow .size120{
+  animation-name: epilogueTextPopUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 2.4s;
+}
+.EpilogueTextFifthRow .size100{
+  animation-name: epilogueTextPopUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 2.6s;
+}
+.EpilogueTextFirstRow .size30{
+  animation-name: epilogueTextPopUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 2.8s;
+}
+.EpilogueTextThirdRow .size30{
+  animation-name: epilogueTextPopUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 3.0s;
+}
+.EpilogueTextSecondRow .size30{
+  animation-name: epilogueTextPopUp;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 3.1s;
 }
