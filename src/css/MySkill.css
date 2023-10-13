@@ -25,7 +25,67 @@
     left: 25px;
     top: 25px;
   }
+.SkillCategory{
+  box-shadow: 2px 2px 7px rgba(0,0,0,0.25);
+  transition: 0.2s;
 
+  position: relative;
+}
+  .SkillCategory:hover{
+    transform: translate(0%,-10px);
+  }
+  .SkillCategory::after{
+    content: "";
+    position: absolute;
+    top: -15px;
+    width: 0px;
+    height: 0px;
+    left: 50%;
+    border-top: 10px solid black;
+    border-bottom: 10px solid transparent;
+    border-right: 10px solid transparent;
+    border-left: 10px solid transparent;
+    transform: translate(-50%);
+
+    opacity: 0;
+    transition: 0.2s;
+  }
+  .SkillCategory::before{
+    position: absolute;
+    font-size: 13px;
+    padding: 5px 10px;
+    background-color: black;
+    border-radius: 5px;
+    color: white;
+    top: -15px;
+    left: 50%;
+    white-space: pre;
+    transform: translate(-50% ,-100%);
+    
+    opacity: 0;
+    transition: 0.2s;
+  }
+  .SkillCategory:hover::after, .SkillCategory:hover::before{
+    opacity: 1;
+  }
+  .WebFrontend::before{
+    content: "HTML, CSS에 능숙하고 \A 반응형 웹 또한 제작 가능하며 \A JS를 이용한 DOM 조작 및 \A 이벤트 핸들링에 어려움이 없습니다.";
+  }
+  .Tool::before{
+    content: "Clip-Studio와 PhotoShop을 \A 사용하여 간단한 디자인을 할 수 있고 \A Figma를 이용하여 웹의 와이어 프레임과 \A 디자인 시안을 제작할 수 있습니다.";
+  }
+  .Language::before{
+    content: "C++, C# 코드를 사용했던 경험이 있어서 \A C++,C#으로 작성된 코드 이해에 능합니다.";
+  }
+  .Library::before{
+    content: "JavaScript 기반 라이브러리인 \A j-Query와 React를 이용한 프로젝트를 \A 진행해본 경험이 있어 사용하는 데 부담이 없습니다.";
+  }
+  .Communication::before{
+    content: "업무에 필요한 소통 수단으로 카카오톡과 \A Slack을 이용한 경험이 있습니다.";
+  }
+  .VersionControl::before{
+    content: "Git과 GitHub를 이용한 버전관리에 능하고 \A GitHub를 이용하여 팀 프로젝트를 진행하며 \A Branch 분리, Pull request를 이용하여 \A 팀원들과 협업한 경험이 있습니다.";
+  }
 .SkillCategoryWrap{
   width: 980px;
   height: 580px;

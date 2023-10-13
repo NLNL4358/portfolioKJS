@@ -89,7 +89,7 @@
 
 
 /* 애니메이션 */
-/* 애니메이션은 우선 처음 1초는 페이지가 불러오는 시간이니 delay + 1 초는 기본 -> 0.5초가 적당한듯 */
+/* 애니메이션은 우선 처음 1초는 페이지가 불러오는 시간이니 delay + 1 초는 기본 -> 0.3초가 적당한듯 */
 /* 그 후 하나씩 팝업되야하니 delay + 0.3 초? 0.2초 씩 미루면서 애니메이션을 넣어주자 */
  /* 마지막상태 유지를 위해 fill-mode  : forwards */
 @keyframes epilogueTextPopUp {
@@ -108,89 +108,89 @@
   animation-name: epilogueTextPopUp;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 0.5s;
+  animation-delay: 0.3s;
 }
 .EpilogueTextFirstRow .size50{
   animation-name: epilogueTextPopUp;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 0.7s;
+  animation-delay: 0.4s;
 }
 .EpilogueTextSecondRow .size50{
   animation-name: epilogueTextPopUp;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 0.9s;
+  animation-delay: 0.5s;
 }
 .EpilogueTextForthRow .size120{
   animation-name: epilogueTextPopUp;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 1.1s;
+  animation-delay: 0.6s;
 }
 .EpilogueTextThirdRow .size50{
   animation-name: epilogueTextPopUp;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 1.3s;
+  animation-delay: 0.7s;
 }
 .EpilogueTextForthRow .size60{
   animation-name: epilogueTextPopUp;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 1.5s;
+  animation-delay: 0.8s;
 }
 .EpilogueTextFirstRow .size120{
   animation-name: epilogueTextPopUp;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 1.7s;
+  animation-delay: 0.9s;
 }
 .EpilogueTextFirstRow .size100{
   animation-name: epilogueTextPopUp;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 1.9s;
+  animation-delay: 1.0s;
 }
 .EpilogueTextForthRow .size50{
   animation-name: epilogueTextPopUp;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 2.1s;
+  animation-delay: 1.1s;
 }
 .EpilogueTextSecondRow .size80{
   animation-name: epilogueTextPopUp;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 2.2s;
+  animation-delay: 1.2s;
 }
 .EpilogueTextFifthRow .size120{
   animation-name: epilogueTextPopUp;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 2.4s;
+  animation-delay: 1.3s;
 }
 .EpilogueTextFifthRow .size100{
   animation-name: epilogueTextPopUp;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 2.6s;
+  animation-delay: 1.4s;
 }
 .EpilogueTextFirstRow .size30{
   animation-name: epilogueTextPopUp;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 2.8s;
+  animation-delay: 1.5s;
 }
 .EpilogueTextThirdRow .size30{
   animation-name: epilogueTextPopUp;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 3.0s;
+  animation-delay: 1.6s;
 }
 .EpilogueTextSecondRow .size30{
   animation-name: epilogueTextPopUp;
   animation-fill-mode: forwards;
   animation-duration: 1s;
-  animation-delay: 3.1s;
+  animation-delay: 1.7s;
 }

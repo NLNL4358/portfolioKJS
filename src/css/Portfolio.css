@@ -3,11 +3,12 @@
   margin-top: 70px;
   display: flex;
   justify-content: space-between;
-  align-items: center;
+  align-items: flex-start;
 }
 .PortfolioLeftMonitorSection{
   margin-top: 50px;
   width: 55%;
+  height: 100%;
   position: relative;
 }
 .PortFolioMonitorImage{
@@ -16,6 +17,8 @@
   left: 20px;
   top: 50px;
   width: 900px;
+
+  pointer-events: none;
 }
 .PortfolioPageImageWrap{
   margin: 85px 0px 0px 125px;
@@ -23,9 +26,15 @@
   width: 692px;
   height: 381px;
 
-  overflow: hidden;
+  /* overflow: hidden; */
+  overflow-x: hidden;
+    -ms-overflow-style: none; /* IE and Edge */
+    scrollbar-width: none; /* Firefox */
   position: relative;
 }
+  .PortfolioPageImageWrap::-webkit-scrollbar{ /* 크롬 */
+    width: 0px;
+  }
 .PortfolioPageImageSlider{
   position: absolute;
   top: 0;
@@ -33,15 +42,31 @@
 
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 
   height: 100%;
 }
 .PortfolioPageImage{
   width: 100%;
-  height: auto;
+  height: 0px;
 }
-
+  .PortfolioPageImage:hover{
+    /* animation-name: portfolioPageImageAnimation;
+    animation-duration: 20s;
+    animation-iteration-count: 1;
+    animation-fill-mode: forwards; */
+  }
+  @keyframes portfolioPageImageAnimation {
+    0%{
+      transform: translate(0%, 0%);
+    }
+    100%{
+      transform: translate(0%, calc(-100% + 381px));
+    }
+  }
+  .PortfolioPageImage.target{
+    height: auto;
+  }
 
 
 .PortfolioRightTextSection{
@@ -91,3 +116,7 @@
 
     z-index: -5;
   }
+
+.PortfolioProjectExplanation, .portfolioFunctionText{
+  white-space: pre-wrap;
+}

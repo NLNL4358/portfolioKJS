@@ -86,13 +86,15 @@ const About = (props) => {
               <p className='AboutGridTextBody'>한밭대학교 - 컴퓨터공학</p>
             </div>
             <div className="AboutGridContents AboutCareer">
-              <h5 className='AboutGridTextName boldPretendard'>경력
+              <h5 className='AboutGridTextName boldPretendard'>경력 및 경험
               <img className='AboutGridImage' src="/image/About/career.svg" alt="" />
               </h5>
               <p className='AboutGridTextBody'>한국 과학 기술원 KAIST : 문화기술 연구소 - Visual Media Lab - 위촉연구원</p>
               <small>2022.04 ~ 2022.12  약 9개월</small>
               <p className='AboutGridTextBody'>에이치비 솔루션 (구 케이맥) - SE 개발자</p>
               <small>2020.12 ~  2022.01 약 1년 3개월</small>
+              <p className='AboutGridTextBody'>국비교육 - Html, Css, JavaScript, 리액트 활용 프론트엔드 개발자 양성과정</p>
+              <small>2023.04 ~ 2023.10 약 6개월 </small>
             </div>
           </div>
         </div>
