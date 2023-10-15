@@ -53,7 +53,8 @@ function App() {
   const portfolioImageArray = [ /* src */
     "/image/Portfolio/cyphers.png",
     "/image/Portfolio/everland.png",
-    "/image/Portfolio/jejuair.png"
+    "/image/Portfolio/jejuair.png",
+    "image/Portfolio/daejeonCyberLibrary.png"
   ]
 
   const images = new Array();
