@@ -133,11 +133,17 @@ button{
   cursor: pointer;
 }
 
-point{
+point1{
   color : var(--point-color1);
 }
 point2{
   color : var(--point-color2);
+}
+point3{
+  color : rgb(91, 165, 250);
+}
+point4{
+  color : rgb(255, 130, 14);
 }
 
 

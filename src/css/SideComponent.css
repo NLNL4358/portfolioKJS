@@ -48,7 +48,6 @@
 
 .sideComponentIndexWrap{
   /* margin-top: 90px; */
-  margin-bottom: 150px;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -87,6 +86,45 @@
     top: 50%;
 
     transform: translate(-50%,-50%);
+  }
+
+
+.sideComponentScrollPageButtonWrap{
+  width: 100%;
+  height: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.scrollPageButton{
+  width: 60px;
+  height: 30px;
+  border-radius: 25px;
+  background-color: greenyellow;
+  position: relative;
+
+  cursor: pointer;
+}
+  .scrollPageButton.Off{
+    background-color: var(--border-color1);
+  }
+.scrollPageButtonCircle{
+  width: 25px;
+  height: 25px;
+  top: 50%;
+  transform: translate(0%, -50%);
+  position: absolute;
+  background-color: #fff;
+  border-radius: 50%;
+
+  transition: .5s;
+}
+  .scrollPageButtonCircle{
+    left: 5px;
+  }
+  .scrollPageButtonCircle.Off{
+    left: calc(100% - 30px);
   }
 
 

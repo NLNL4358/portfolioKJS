@@ -3,7 +3,7 @@ import '../css/SideComponent.css'
 
 import {Link, useNavigate} from 'react-router-dom'
 
-/* props로 받은 것 -  index , setIndex */
+/* props로 받은 것 -  index , setIndex ,ScrollPageNavigate ,setScrollPageNavigate*/
 const SideComponent = (props) => {
   const navigate = useNavigate();
   const indexArray = [
@@ -23,6 +23,15 @@ const SideComponent = (props) => {
     index === 0 ? navigate('/') : navigate(`/${indexArray[index]}`);
   } 
 
+
+  const changeScrollPageButton = () => {
+    if(props.scrollPageNavigate === "On"){
+      props.setScrollPageNavigate("Off");
+    }
+    else{
+      props.setScrollPageNavigate("On");
+    }
+  }
   return (
     <div className='SideComponent'>
       <div className="sideComponentImageWrap">
@@ -42,7 +51,15 @@ const SideComponent = (props) => {
           ))
         }
       </div>
-      
+      <div className="sideComponentScrollPageButtonWrap">
+        {
+          props.scrollPageNavigate === undefined ? null : (
+            <div onClick={changeScrollPageButton} className={`scrollPageButton ${props.scrollPageNavigate}`}>
+              <div className={`scrollPageButtonCircle ${props.scrollPageNavigate}`}></div>
+            </div>
+          )
+        }
+      </div>
       <div className="sideComponentBottomWrap">
         <div className="gitHubLogoWrap">
           <Link className='gitHubLogoLink' to='https://github.com/NLNL4358' target="_blank"> 

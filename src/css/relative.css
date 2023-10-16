@@ -1,0 +1,7 @@
+@media screen and (max-width : 1601px) {
+  .inner{
+    min-width: 1600px;
+    width: 100%;
+  }
+
+}

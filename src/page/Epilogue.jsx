@@ -4,30 +4,33 @@ import "../css/Epilogue.css"
 
 import {useRef, useEffect} from 'react'
 
-/* props로 전달받은것 setIndex */
+/* props로 전달받은것 setIndex , scrollPageNavigate*/
 const Epilogue = (props) => {
 
   const EpilogueRef = useRef();
+
+  /* 핸들러 달아주기 */
+  const wheelHandler = (e) =>{
+    e.preventDefault();
+    const { deltaY } = e;
+
+    if(deltaY > 0 && props.scrollPageNavigate === "On"){
+      /* 스크롤내릴때 */
+      console.log("scroll Down");
+      props.setIndex(4)
+    }
+    else if(deltaY < 0 && props.scrollPageNavigate === "On"){
+      /* 스크롤올릴때 */
+      console.log("scroll Up");
+      props.setIndex(2);
+    }
+    
+  }
+  
   useEffect(()=>{
     const EpilogueRefCurrent = EpilogueRef.current;
     setTimeout(() => {
-      /* 핸들러 달아주기 */
-      const wheelHandler = (e) =>{
-        e.preventDefault();
-        const { deltaY } = e;
-
-        if(deltaY > 0){
-          /* 스크롤내릴때 */
-          console.log("scroll Down");
-          props.setIndex(4)
-        }
-        else{
-          /* 스크롤올릴때 */
-          console.log("scroll Up");
-          props.setIndex(2);
-        }
-        
-      }
+      
       EpilogueRefCurrent.addEventListener("wheel", wheelHandler);
       return () => {
         EpilogueRefCurrent.removeEventListener("wheel", wheelHandler);

@@ -3,30 +3,34 @@ import "../css/MySkill.css"
 
 import {useRef, useEffect} from 'react'
 
-/* props 로 받은것 setIndex */
+/* props 로 받은것 setIndex , scrollPageNavigate*/
 const MySkill = (props) => {
+  
   /* 스크롤 액션 */
   const MySkillRef = useRef();
+
+  /* 핸들러 달아주기 */
+  const wheelHandler = (e) =>{
+    e.preventDefault();
+    const { deltaY } = e;
+
+    if(deltaY > 0 && props.scrollPageNavigate === "On"){
+      /* 스크롤내릴때 */
+      console.log("scroll Down");
+      props.setIndex(3)
+    }
+    else if(deltaY < 0 && props.scrollPageNavigate === "On"){
+      /* 스크롤올릴때 */
+      console.log("scroll Up");
+      props.setIndex(1);
+    }
+    
+  }
+
   useEffect(()=>{
     const MySkillRefCurrent = MySkillRef.current;
     setTimeout(() => {
-      /* 핸들러 달아주기 */
-      const wheelHandler = (e) =>{
-        e.preventDefault();
-        const { deltaY } = e;
-
-        if(deltaY > 0){
-          /* 스크롤내릴때 */
-          console.log("scroll Down");
-          props.setIndex(3)
-        }
-        else{
-          /* 스크롤올릴때 */
-          console.log("scroll Up");
-          props.setIndex(1);
-        }
-        
-      }
+      
       MySkillRefCurrent.addEventListener("wheel", wheelHandler);
       return () => {
         

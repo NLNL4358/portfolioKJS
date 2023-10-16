@@ -1,5 +1,6 @@
 import './css/App.css';
 import './css/reset.css';
+import './css/relative.css';
 
 import {useState, useEffect, useLayoutEffect} from 'react'
 import {Routes, Route, Link, useNavigate} from 'react-router-dom'
@@ -66,16 +67,18 @@ function App() {
     }
   },[])
 
+  /* 스크롤로 페이지를 이동할 것인가? 말것인가 정하는 useState */
+  const [scrollPageNavigate, setScrollPageNavigate] = useState("On");
 
   return (
     <div className="App inner">
-      <SideComponent index={index} setIndex={(index)=>{setIndex(index)}}></SideComponent>
+      <SideComponent index={index} setIndex={(index)=>{setIndex(index)}} scrollPageNavigate={scrollPageNavigate} setScrollPageNavigate={(bool)=>{setScrollPageNavigate(bool)}}></SideComponent>
       <Routes>
-        <Route path='/' element={<Home setIndex={(index)=>{setIndex(index)}}></Home>}></Route>
-        <Route path='/About' element={<About setIndex={(index)=>{setIndex(index)}}></About>}></Route>
-        <Route path='/Skill' element={<MySkill setIndex={(index)=>{setIndex(index)}}></MySkill>}></Route>
-        <Route path='/Epilogue' element={<Epilogue setIndex={(index)=>{setIndex(index)}}></Epilogue>}></Route>
-        <Route path='/Portfolio' element={<Portfolio portfolioImageArray={portfolioImageArray} setIndex={(index)=>{setIndex(index)}}></Portfolio>}></Route>
+        <Route path='/' element={<Home setIndex={(index)=>{setIndex(index)}}scrollPageNavigate={scrollPageNavigate}></Home>}></Route>
+        <Route path='/About' element={<About setIndex={(index)=>{setIndex(index)}} scrollPageNavigate={scrollPageNavigate}></About>}></Route>
+        <Route path='/Skill' element={<MySkill setIndex={(index)=>{setIndex(index)}} scrollPageNavigate={scrollPageNavigate}></MySkill>}></Route>
+        <Route path='/Epilogue' element={<Epilogue setIndex={(index)=>{setIndex(index)}} scrollPageNavigate={scrollPageNavigate}></Epilogue>}></Route>
+        <Route path='/Portfolio' element={<Portfolio portfolioImageArray={portfolioImageArray} setIndex={(index)=>{setIndex(index)}} scrollPageNavigate={scrollPageNavigate}></Portfolio>}></Route>
       </Routes>
     </div>
   );

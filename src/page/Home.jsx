@@ -3,7 +3,7 @@ import '../css/Home.css'
 import {useState ,useEffect, useRef} from 'react'
 
 
-/* props 로 가져온것 setIndex */
+/* props 로 가져온것 setIndex, scrollPageNavigate */
 const Home = (props) => {
   const goToAboutPage = (event)=>{
     event.preventDefault();
@@ -64,22 +64,24 @@ const Home = (props) => {
 
   /* 스크롤 액션 */
   const HomeRef = useRef();
+
+  /* 핸들러 달아주기 */
+  const wheelHandler = (e) =>{
+    e.preventDefault();
+    const { deltaY } = e;
+
+    if(deltaY > 0 && props.scrollPageNavigate==="On"){
+      /* 스크롤내릴때 */
+      console.log("scroll Down");
+      props.setIndex(1);
+    }
+  }
+
   useEffect(()=>{
     // 초기 타이핑 실행
     typing();
     const HomeRefCurrent = HomeRef.current;
     setTimeout(() => {
-      /* 핸들러 달아주기 */
-      const wheelHandler = (e) =>{
-        e.preventDefault();
-        const { deltaY } = e;
-
-        if(deltaY > 0){
-          /* 스크롤내릴때 */
-          console.log("scroll Down");
-          props.setIndex(1);
-        }
-      }
       HomeRefCurrent.addEventListener("wheel", wheelHandler);
       return () => {
         HomeRefCurrent.removeEventListener("wheel", wheelHandler);
