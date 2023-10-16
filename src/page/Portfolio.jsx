@@ -19,7 +19,7 @@ const Portfolio = (props) => {
 
     e.preventDefault();
     const { deltaY } = e;
-    if(deltaY < 0 && props.scrollPageNavigate === "On"){
+    if(deltaY < 0){
       /* 스크롤올릴때 */
       console.log("scroll Up");
       props.setIndex(3);
@@ -27,14 +27,14 @@ const Portfolio = (props) => {
   },[])
 
   useEffect(()=>{
-    const PortfolioRefCurrent = PortfolioRef.current;
-    setTimeout(() => {  
-      /* portfolio page에 핸들러 달아주기 */
-      PortfolioRefCurrent.addEventListener("wheel", wheelHandler);
-      return () => {
-        PortfolioRefCurrent.removeEventListener("wheel", wheelHandler);
-      };
-    },0) /* 맨마지막 페이지니까 .. 바로 되도될듯*/ 
+    // const PortfolioRefCurrent = PortfolioRef.current;
+    // setTimeout(() => {  
+    //   /* portfolio page에 핸들러 달아주기 */
+    //   PortfolioRefCurrent.addEventListener("wheel", wheelHandler);
+    //   return () => {
+    //     PortfolioRefCurrent.removeEventListener("wheel", wheelHandler);
+    //   };
+    // },0) /* 맨마지막 페이지니까 .. 바로 되도될듯*/ 
   },[])
   
   /* imageWrap에 마우스가 들어오거나 나갈때 변경될 useState */

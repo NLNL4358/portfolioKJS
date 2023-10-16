@@ -14,12 +14,12 @@ const MySkill = (props) => {
     e.preventDefault();
     const { deltaY } = e;
 
-    if(deltaY > 0 && props.scrollPageNavigate === "On"){
+    if(deltaY > 0){
       /* 스크롤내릴때 */
       console.log("scroll Down");
       props.setIndex(3)
     }
-    else if(deltaY < 0 && props.scrollPageNavigate === "On"){
+    else if(deltaY < 0 ){
       /* 스크롤올릴때 */
       console.log("scroll Up");
       props.setIndex(1);
@@ -28,15 +28,15 @@ const MySkill = (props) => {
   }
 
   useEffect(()=>{
-    const MySkillRefCurrent = MySkillRef.current;
-    setTimeout(() => {
+    // const MySkillRefCurrent = MySkillRef.current;
+    // setTimeout(() => {
       
-      MySkillRefCurrent.addEventListener("wheel", wheelHandler);
-      return () => {
+    //   MySkillRefCurrent.addEventListener("wheel", wheelHandler);
+    //   return () => {
         
-        MySkillRefCurrent.removeEventListener("wheel", wheelHandler);
-      };
-    },1000)
+    //     MySkillRefCurrent.removeEventListener("wheel", wheelHandler);
+    //   };
+    // },1000)
   },[])
 
 

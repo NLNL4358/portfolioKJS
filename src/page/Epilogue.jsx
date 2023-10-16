@@ -14,12 +14,12 @@ const Epilogue = (props) => {
     e.preventDefault();
     const { deltaY } = e;
 
-    if(deltaY > 0 && props.scrollPageNavigate === "On"){
+    if(deltaY > 0 ){
       /* 스크롤내릴때 */
       console.log("scroll Down");
       props.setIndex(4)
     }
-    else if(deltaY < 0 && props.scrollPageNavigate === "On"){
+    else if(deltaY < 0){
       /* 스크롤올릴때 */
       console.log("scroll Up");
       props.setIndex(2);
@@ -28,14 +28,14 @@ const Epilogue = (props) => {
   }
   
   useEffect(()=>{
-    const EpilogueRefCurrent = EpilogueRef.current;
-    setTimeout(() => {
+    // const EpilogueRefCurrent = EpilogueRef.current;
+    // setTimeout(() => {
       
-      EpilogueRefCurrent.addEventListener("wheel", wheelHandler);
-      return () => {
-        EpilogueRefCurrent.removeEventListener("wheel", wheelHandler);
-      };
-    },1000)
+    //   EpilogueRefCurrent.addEventListener("wheel", wheelHandler);
+    //   return () => {
+    //     EpilogueRefCurrent.removeEventListener("wheel", wheelHandler);
+    //   };
+    // },1000)
   },[])
 
   return (

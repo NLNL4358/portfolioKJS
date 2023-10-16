@@ -11,13 +11,12 @@ const About = (props) => {
   const wheelHandler = (e) =>{
     e.preventDefault();
     const { deltaY } = e;
-    
-    if(deltaY > 0 && props.scrollPageNavigate === "On"){
+    if(deltaY > 0 ){
       /* 스크롤내릴때 */
       console.log("scroll Down");
       props.setIndex(2)
     }
-    else if(deltaY < 0 && props.scrollPageNavigate === "On"){
+    else if(deltaY < 0 ){
       /* 스크롤올릴때 */
       console.log("scroll Up");
       props.setIndex(0);
@@ -26,16 +25,14 @@ const About = (props) => {
   /* 스크롤 액션 */
   const AboutRef = useRef();
   useEffect(()=>{
-    const AboutRefCurrent = AboutRef.current;
-    setTimeout(() => {
-      AboutRefCurrent.addEventListener("wheel", wheelHandler);
-      return () => {
-        AboutRefCurrent.removeEventListener("wheel", wheelHandler);
-      };
-    },1000)
+    // const AboutRefCurrent = AboutRef.current;
+      // setTimeout(() => {
+      //   AboutRefCurrent.addEventListener("wheel", wheelHandler);
+      //   return () => {
+      //     AboutRefCurrent.removeEventListener("wheel", wheelHandler);
+      //   };
+      // },1000)
   },[])
-
- 
 
   return (
     <div ref={AboutRef} className='About contents_inner'>

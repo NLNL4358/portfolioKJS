@@ -72,13 +72,13 @@ function App() {
 
   return (
     <div className="App inner">
-      <SideComponent index={index} setIndex={(index)=>{setIndex(index)}} scrollPageNavigate={scrollPageNavigate} setScrollPageNavigate={(bool)=>{setScrollPageNavigate(bool)}}></SideComponent>
+      <SideComponent index={index} setIndex={(index)=>{setIndex(index)}}></SideComponent>
       <Routes>
-        <Route path='/' element={<Home setIndex={(index)=>{setIndex(index)}}scrollPageNavigate={scrollPageNavigate}></Home>}></Route>
-        <Route path='/About' element={<About setIndex={(index)=>{setIndex(index)}} scrollPageNavigate={scrollPageNavigate}></About>}></Route>
-        <Route path='/Skill' element={<MySkill setIndex={(index)=>{setIndex(index)}} scrollPageNavigate={scrollPageNavigate}></MySkill>}></Route>
-        <Route path='/Epilogue' element={<Epilogue setIndex={(index)=>{setIndex(index)}} scrollPageNavigate={scrollPageNavigate}></Epilogue>}></Route>
-        <Route path='/Portfolio' element={<Portfolio portfolioImageArray={portfolioImageArray} setIndex={(index)=>{setIndex(index)}} scrollPageNavigate={scrollPageNavigate}></Portfolio>}></Route>
+        <Route path='/' element={<Home setIndex={(index)=>{setIndex(index)}}></Home>}></Route>
+        <Route path='/About' element={<About setIndex={(index)=>{setIndex(index)}}></About>}></Route>
+        <Route path='/Skill' element={<MySkill setIndex={(index)=>{setIndex(index)}}></MySkill>}></Route>
+        <Route path='/Epilogue' element={<Epilogue setIndex={(index)=>{setIndex(index)}}></Epilogue>}></Route>
+        <Route path='/Portfolio' element={<Portfolio portfolioImageArray={portfolioImageArray} setIndex={(index)=>{setIndex(index)}}></Portfolio>}></Route>
       </Routes>
     </div>
   );

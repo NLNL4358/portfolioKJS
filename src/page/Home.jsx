@@ -70,7 +70,7 @@ const Home = (props) => {
     e.preventDefault();
     const { deltaY } = e;
 
-    if(deltaY > 0 && props.scrollPageNavigate==="On"){
+    if(deltaY > 0){
       /* 스크롤내릴때 */
       console.log("scroll Down");
       props.setIndex(1);
@@ -80,13 +80,13 @@ const Home = (props) => {
   useEffect(()=>{
     // 초기 타이핑 실행
     typing();
-    const HomeRefCurrent = HomeRef.current;
-    setTimeout(() => {
-      HomeRefCurrent.addEventListener("wheel", wheelHandler);
-      return () => {
-        HomeRefCurrent.removeEventListener("wheel", wheelHandler);
-      };
-    },1000)
+    // const HomeRefCurrent = HomeRef.current;
+    // setTimeout(() => {
+    //   HomeRefCurrent.addEventListener("wheel", wheelHandler);
+    //   return () => {
+    //     HomeRefCurrent.removeEventListener("wheel", wheelHandler);
+    //   };
+    // },1000)
   },[])
 
 

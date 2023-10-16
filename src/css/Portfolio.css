@@ -48,7 +48,7 @@
     background: linear-gradient(black, transparent 30%);
 
     animation-name: PortfolioPageImageWrapBeforeAfterAnim;
-    animation-duration: 7s;
+    animation-duration: 5s;
     animation-fill-mode: forwards;
   }
   .PortfolioPageImageWrap::after{
@@ -61,7 +61,7 @@
     pointer-events: none;
     color: white;
     animation-name: PortfolioPageImageWrapBeforeAfterAnim;
-    animation-duration: 7s;
+    animation-duration: 5s;
     animation-fill-mode: forwards;
   }
   @keyframes PortfolioPageImageWrapBeforeAfterAnim {
