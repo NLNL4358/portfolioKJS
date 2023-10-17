@@ -41,16 +41,16 @@ const Portfolio = (props) => {
   const [imageWrapHover, setImageWrapHover] = useState(false);
 
   /* imageWrap에 mouseOver 나 mouseOut이 일어난다면!! */
-  useEffect(()=>{
-    if(imageWrapHover){
-      /* hover 중일때는 portfolio page의 wheel 이벤트 핸들러 제거! */
-      PortfolioRef.current.removeEventListener("wheel", wheelHandler);
-    }
-    else{
-      /* hover 끝나면 portfolio page의 wheel 이벤트 핸들러 다시 장착 */
-      PortfolioRef.current.addEventListener("wheel", wheelHandler);
-    }
-  },[imageWrapHover])
+  // useEffect(()=>{
+  //   if(imageWrapHover){
+  //     /* hover 중일때는 portfolio page의 wheel 이벤트 핸들러 제거! */
+  //     PortfolioRef.current.removeEventListener("wheel", wheelHandler);
+  //   }
+  //   else{
+  //     /* hover 끝나면 portfolio page의 wheel 이벤트 핸들러 다시 장착 */
+  //     PortfolioRef.current.addEventListener("wheel", wheelHandler);
+  //   }
+  // },[imageWrapHover])
   
 
 

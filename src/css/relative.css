@@ -1,7 +1,172 @@
+/* inner & App, reset */
 @media screen and (max-width : 1601px) {
   .inner{
-    min-width: 1600px;
+    /* 1600 * 900 해상도에선 웹 body의 높이가 751px */
+    min-width: calc( 1600px - (100vw - 100%) );
     width: 100%;
+    max-height: 751px;
+  }
+  :root{
+    --h1-size: 3.0rem; 
+    --h2-size: 2.47rem;
+    --h3-size: 1.87rem;
+    --h4-size: 1.6rem;
+    --h5-size: 1.4rem;
+    --p-size: 1.20rem;
+    --span-size: 1.00rem;
+    --body-size: 0.87rem;
+  }
+  .pageNameSection{
+    margin-top: 20px;
+  }
+  .pageName{
+    font-size: 65px;
+  }
+  
+
+/* sideComponent */
+.sideComponentIndexWrap .sideComponentIndex{
+  font-size: var(--p-size);
+}
+.sideComponentNameWrap .sideComponentName{
+  font-size: var(--h2-size);
+}
+
+
+  /* Home */
+  .Home .HomeTextMyName{
+    margin-top: 30px;
+  }
+  .Home .TypingTextWrap{
+    margin-top: 35px;
+  }
+  .Home .HomePointBar{
+    margin : 40px 0px;
+  } 
+  .Home .HomeTextHelloWrap{
+    margin-bottom: 40px;
+  }
+  .Home .HomeRightImageWrap{
+    margin-top: 30px;
+    width: 100%;
+    height: 0px;
+    padding-bottom: 100%;
+  }
+  .Home .HomeRightImage{
+    width: 90%;
   }
 
+
+
+  /* About */
+  .About .AboutContentsWrap{
+    margin-top: 70px;
+  }
+  .About .AboutGridWrap{
+    margin-right: 70px;
+
+  }
+  .About .AboutGridWrap{
+    column-gap: 30px;
+    row-gap: 0px;
+  }
+
+  /* Skill */
+  .MySkill .AllSkillsWrap{
+    width: 1150px;  
+    height: 600px;
+    margin-top: 40px;
+    padding-left: 0px;
+    padding-top: 25px;
+  }
+  .MySkill .SkillCategoryWrap{
+    width: 950px;
+    height: 500px;
+    margin: auto;
+  }
+  .MySkill .SkillCategoryName{
+    height: 50px;
+  }
+  .MySkill .SkillWrap{
+    padding: 25px 20px;
+  }
+
+  /* Epilogue */
+  .Epilogue .EpilogueContentsWrap{
+    height: auto;
+    margin-top: 50px;
+  }
+  .Epilogue .EpilogueTopDOM, .Epilogue .EpilogueBottomDOM{
+    margin-left: 30px;
+  }
+  .Epilogue .size30{
+    font-size: 30px;
+  }
+  .Epilogue .size50{
+    font-size: 50px;
+  }
+  .Epilogue .size60{
+    font-size: 60px;
+  }
+  .Epilogue .size80{
+    font-size: 70px;
+  }
+  .Epilogue .size100{
+    font-size: 95px;
+  }
+  .Epilogue .size120{
+    font-size: 110px;
+  }
+
+
+  /* Portfolio */
+  .Portfolio .PortfolioContentsWrap{
+    /* margin-top: 60px; */
+  }
+  .Portfolio .PortfolioLeftMonitorSection{
+    padding-bottom: 30px;
+    width: 50%;
+  }
+  .Portfolio .PortFolioMonitorImage{
+    margin-bottom: 30px;
+    width: 700px;
+  }
+  .Portfolio .PortfolioPageImageWrap{
+    width: 537.6px;
+    height: 296.3px;
+    margin: 75px 0px 0px 100px;
+  }
+  .Portfolio .PortfolioRightTextSection{
+    width: 50%;
+    min-height: 550px;
+  }
+  .Portfolio .PortfolioProjectTextWrap{
+    height: 550px;
+  }
+  .Portfolio .PortfolioProjectWrap{
+    padding-left : 100px;
+    padding-right: 30px;
+  }
+  
+  .Portfolio .PortfolioProjectExplanation{
+    margin-top: 25px;
+    margin-bottom: 10px;
+  }
+
+  .Portfolio .portfolioButtonWrap{
+    bottom: 30px;
+  }
+  .Portfolio .goToSiteButton, .Portfolio .goToGitHubButton{
+    width: 150px;
+    height: 40px;
+    border-radius: 5px;
+  }
+  .Portfolio .portfolioHavePageText, .Portfolio .portfolioFunctionText, .Portfolio .portfolioTechText, .Portfolio .portfolioPeriodText, .Portfolio .portfolioNumberOfPeopleText{
+    margin-left: 70px;
+  }
+
+  .Portfolio .pageButtonWrap{
+    left: -50%;
+    transform: translate(-25%, 50%);
+  }
 }

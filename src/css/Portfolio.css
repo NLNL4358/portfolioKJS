@@ -45,14 +45,16 @@
     width: 100%;
     height: 100%;
     pointer-events: none;
-    background: linear-gradient(black, transparent 30%);
+    background: linear-gradient(black, transparent 50%);
 
-    animation-name: PortfolioPageImageWrapBeforeAfterAnim;
+    /* animation-name: PortfolioPageImageWrapBeforeAfterAnim;
     animation-duration: 5s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
+
+    transition: 0.5s;
   }
   .PortfolioPageImageWrap::after{
-    content : "..화면 안에서 스크롤하세요..";
+    content : "마우스를 올려 스크롤 하세요";
     position: absolute;
     z-index: 10;
     left: 50%;
@@ -60,9 +62,11 @@
     transform: translate(-50%);
     pointer-events: none;
     color: white;
-    animation-name: PortfolioPageImageWrapBeforeAfterAnim;
+    /* animation-name: PortfolioPageImageWrapBeforeAfterAnim;
     animation-duration: 5s;
-    animation-fill-mode: forwards;
+    animation-fill-mode: forwards; */
+
+    transition: 0.5s;
   }
   @keyframes PortfolioPageImageWrapBeforeAfterAnim {
     0%{
@@ -75,6 +79,12 @@
       opacity: 0;
     }
   }
+
+  /* 그냥 호버시 사라지는거로 하자 */
+  .PortfolioPageImageWrap:hover::before,.PortfolioPageImageWrap:hover::after{
+    opacity: 0;
+  }
+
 .PortfolioPageImageSlider{
   position: absolute;
   top: 0;
@@ -230,7 +240,8 @@
   position: absolute;
   font-size: var(--small-size);
   color: #CCC;
-
+  width: 100%;
+  text-align: center;
   font-weight: 100;
   left: 50%;
   top: -20px;
