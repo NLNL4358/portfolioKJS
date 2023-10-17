@@ -38,6 +38,10 @@ const Epilogue = (props) => {
     // },1000)
   },[])
 
+  const goToPortfolio = () =>{
+    props.setIndex(2);
+  }
+
   return (
     <div ref={EpilogueRef} className='Epilogue contents_inner'>
       <div className="pageNameSection">
@@ -82,11 +86,11 @@ const Epilogue = (props) => {
               <p className='size50 Jamsil'>겸손한 신입의 자세</p>
               <p className='size60 Jamsil'>성장의 기회</p>
             </div>
-            <p className='size120 Jamsil'>오픈 마인드</p>
+            <p className='size100 Jamsil'>오픈 마인드</p>
           </div>
-          <div className="EpilogueRows EpilogueTextFifthRow">
-            <p className='size100 Jamsil'>배움이 고픈</p>
-            <p className='size120 Jamsil'>{`"`}</p>
+          <div onClick={()=>{goToPortfolio()}} className="goToPortfolio EpilogueRows EpilogueTextFifthRow">
+            <p className=' size100 Jamsil'>포트폴리오</p>
+            <p className=' size120 Jamsil'>{`"`}</p>
           </div>
         </div>
 

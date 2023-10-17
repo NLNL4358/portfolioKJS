@@ -1,6 +1,6 @@
 .EpilogueContentsWrap{
   margin: auto;
-  margin-top: 80px;
+  margin-top: 60px;
   width: 1280px;
   height: 670px;
 
@@ -47,7 +47,9 @@
 }
 
 .EpilogueTextWrap{
-  margin: 20px 0px;
+  margin: 30px 0px;
+
+  /* padding-right: 100px; */
 }
 .EpilogueRows{
   margin: auto;
@@ -66,7 +68,8 @@
 .EpilogueTextForthRow .EpilogueWrapInRow p{
   text-align: right;
 }
-.EpilogueTextFifthRow .size120{
+.EpilogueRows .EpilogueTextFifthRow {
+  text-align: left;
 }
 .size30{
   font-size: 30px;
@@ -122,7 +125,7 @@
   animation-duration: 1s;
   animation-delay: 0.5s;
 }
-.EpilogueTextForthRow .size120{
+.EpilogueTextForthRow .size100{
   animation-name: epilogueTextPopUp;
   animation-fill-mode: forwards;
   animation-duration: 1s;
@@ -193,4 +196,30 @@
   animation-fill-mode: forwards;
   animation-duration: 1s;
   animation-delay: 1.7s;
+}
+
+.goToPortfolio{
+  position: relative;
+  width: fit-content;
+  margin: auto;
+
+}
+.goToPortfolio .size100{
+  /* 물결 밑줄!! */
+  text-decoration: underline;
+  text-decoration-color: #91B3E7;
+  text-decoration-style: wavy;
+  text-decoration-thickness: 10px;
+  text-underline-offset: 25px;
+}
+
+.goToPortfolio p{
+  cursor: pointer;
+  transition: 0.3s;
+
+}
+
+.goToPortfolio:hover p{
+  color : var(--button-color2);
+  text-decoration-color: var(--button-color2);
 }

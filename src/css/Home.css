@@ -127,7 +127,7 @@
     background-color: var(--button-color2);
   }
   .HomeMoreButton::before{
-    content: "please click here";
+    content: "please click here !";
     width: 100%;
     font-weight: 100;
     position: absolute;

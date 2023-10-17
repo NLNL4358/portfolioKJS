@@ -37,13 +37,13 @@
 
 .pageNameSection{
   width: 100%;
-  margin-top: 40px;
+  margin-top: 20px;
 }
 .pageName{
   font-size: 72px;
   font-family: 'TmoneyRoundWindExtraBold';
   font-weight: 900;
-
+  letter-spacing: -3px;
   text-align: center;
   position: relative;
 }
