@@ -30,16 +30,20 @@ function App() {
         navigate("/")
         break;
       case 1:
-        navigate("/About")
+        navigate("/Epilogue")
+        // navigate("/About")
         break;
       case 2:
-        navigate("/Skill")
+        navigate("/Portfolio")
+        // navigate("/Skill")
         break;
       case 3:
-        navigate("/Epilogue")
+        navigate("/Skill")
+        // navigate("/Epilogue")
         break;
       case 4:
-        navigate("/Portfolio")
+        navigate("/About")
+        // navigate("/Portfolio")
         break;
     
       default:

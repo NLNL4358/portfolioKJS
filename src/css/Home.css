@@ -96,7 +96,21 @@
 
 .HomePointArrow{
   margin: 12px 0px 30px 0px;
+
+  animation-name: navigationArrowAnimationY;
+  animation-duration: 1s;
+  animation-fill-mode: forwards;
+  animation-iteration-count: infinite;
+  animation-direction: alternate;
 }
+  @keyframes navigationArrowAnimationY {
+    0%{
+      transform: translateY(5%);
+    }
+    100%{
+      transform: translateY(-5%);
+    }
+  }
 
 .HomeMoreButton{
   width: 170px;

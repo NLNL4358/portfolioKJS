@@ -104,7 +104,7 @@ const Home = (props) => {
         <div className="HomeTextHelloWrap">
           <h4 className='HomeTextHello'>안녕하세요.</h4>
           <h4 className='HomeTextHello'>무궁한 아이디어를 코드로 승화하며</h4>
-          <h4 className='HomeTextHello'>새로움을 피하지않는 프론트엔드 개발자가 되고싶습니다</h4>
+          <h4 className='HomeTextHello'>도전을 즐기는 프론트엔드 개발자가 되고싶습니다</h4>
         </div>
         <div className="HomeTextSubTextWrap">
           <p className='HomeTextSubText'>지금부터 제가 가진 역량과</p>

@@ -4,7 +4,8 @@
     /* 1600 * 900 해상도에선 웹 body의 높이가 751px */
     min-width: calc( 1600px - (100vw - 100%) );
     width: 100%;
-    max-height: 751px;
+    /* max-height: 751px; */
+    min-height: 751px;
   }
   :root{
     --h1-size: 3.0rem; 
