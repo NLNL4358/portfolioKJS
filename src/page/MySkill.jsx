@@ -79,13 +79,13 @@ const MySkill = (props) => {
               <img src="/image/MySkill/React_logo.png" alt="" />
             </div>
           </div>
-          <div className="SkillCategory Communication">
+          {/* <div className="SkillCategory Communication">
             <h5 className='SkillCategoryName boldPretendard'>Communication</h5>
             <div className="SkillWrap">
               <img src="/image/MySkill/kakaotalk_logo.png" alt="" />
               <img src="/image/MySkill/Slack_logo.png" alt="" />
             </div>
-          </div>
+          </div> */}
           <div className="SkillCategory VersionControl">
             <h5 className='SkillCategoryName boldPretendard'>Version Control</h5>
             <div className="SkillWrap">

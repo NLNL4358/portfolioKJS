@@ -1,6 +1,6 @@
 .AboutContentsWrap{
   width: 100%;
-  margin-top: 140px;
+  margin-top: 100px;
 
   display: flex;
   justify-content: space-between;
@@ -10,12 +10,26 @@
   width: 34.5%;
   height: 100%;
   display: flex;
-  justify-content: center;
-  align-items: flex-start;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
 }
 .AboutLeftImage{
   width: 260px;
   height: auto;
+}
+.goToSkillWrap{
+  margin-top: 55px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.AboutGridTextWrap{
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-content: center;
 }
 
 .AboutRightWrap{
@@ -89,24 +103,80 @@
 
 
 .AboutPointArrow{
-  margin: 12px 0px 30px 0px;
-
-  animation-name: navigationArrowAnimationY;
-  animation-duration: 1s;
+  animation-duration: 3s;
   animation-fill-mode: forwards;
   animation-iteration-count: infinite;
-  animation-direction: alternate;
+  animation-direction: normal;
+  height: 20px;
 }
-  @keyframes navigationArrowAnimationY {
+.firstArrow{
+  margin-top: 20px;
+  opacity: 0.3;
+  animation-name: navigationFirstArrowAnimation;
+}
+.secondArrow{
+  opacity: 0.6;
+  animation-name: navigationSecondArrowAnimation;
+}
+.thirdArrow{
+  opacity: 0.9;
+  margin-bottom: 20px;
+  animation-name: navigationThirdArrowAnimation;
+}
+  @keyframes navigationFirstArrowAnimation {
     0%{
-      transform: translateY(5%);
+      opacity: 0;
+    }
+    25%{
+      opacity: 0.3;
+    }
+    50%{
+      opacity: 0.3;
+    }
+    75%{
+      opacity: 0.3;
     }
     100%{
-      transform: translateY(-5%);
+      opacity: 0.3;
+    }
+  }
+  @keyframes navigationSecondArrowAnimation {
+    0%{
+      opacity: 0;
+    }
+    25%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 0.6;
+    }
+    75%{
+      opacity: 0.6;
+    }
+    100%{
+      opacity: 0.6;
+    }
+  }
+  @keyframes navigationThirdArrowAnimation {
+    0%{
+      opacity: 0;
+    }
+    25%{
+      opacity: 0;
+    }
+    50%{
+      opacity: 0;
+    }
+    75%{
+      opacity: 0.9;
+    }
+    100%{
+      opacity: 0.9;
     }
   }
 
 .AboutMoreButton{
+  margin-top: 15px;
   width: 170px;
   height: 50px;
   background-color: var(--button-color1);
@@ -132,4 +202,13 @@
   left: 50%;
 
   transform: translate(-50%, -100%);
+}
+
+.goToSkillWrap .AboutGridImage{
+  position: relative;
+  opacity: 0.9;
+  transform: translate(0%,0%);
+  left: 0px;
+
+  margin-right: 20px
 }

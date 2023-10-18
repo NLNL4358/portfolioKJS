@@ -49,8 +49,13 @@ const About = (props) => {
         <div className="AboutLeftWrap">
           <img className='AboutLeftImage' src="/image/About/aboutMeImage.png" alt="" />
           <div className="goToSkillWrap">
-            <h5 className='AboutGridTextName boldPretendard'>역량</h5>
-            <img className='AboutPointArrow' src="/image/Home/PointArrow.png" alt="" />
+            <div className="AboutGridTextWrap">
+              <img className='AboutGridImage' src="/image/About/skill.svg" alt="" />
+              <h5 className='AboutGridTextName boldPretendard'>More Information</h5>
+            </div>
+            <img className='AboutPointArrow firstArrow' src="/image/About/AboutArrow.svg" alt="" />
+            <img className='AboutPointArrow secondArrow' src="/image/About/AboutArrow.svg" alt="" />
+            <img className='AboutPointArrow thirdArrow' src="/image/About/AboutArrow.svg" alt="" />
             <button onClick={(event)=>(goToSkillPage(event))} className='AboutMoreButton'>보유 역량 확인</button>
           </div>
         </div>
