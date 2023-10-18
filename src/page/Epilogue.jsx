@@ -91,6 +91,9 @@ const Epilogue = (props) => {
           <div onClick={()=>{goToPortfolio()}} className="goToPortfolio EpilogueRows EpilogueTextFifthRow">
             <p className=' size100 Jamsil'>포트폴리오</p>
             <p className=' size120 Jamsil'>{`"`}</p>
+            <img className='goToPortfolioCursorEffect' src="/image/Epilogue/mousePointerEffect.png" alt="" />
+            <img className='goToPortfolioCursor' src="/image/Epilogue/mousePointer.png" alt="" />
+            <h3 className='goToPortfolioText Jamsil'>Click Here!</h3>
           </div>
         </div>
 

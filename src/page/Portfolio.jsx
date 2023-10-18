@@ -150,7 +150,10 @@ const Portfolio = (props) => {
           <img className='PortFolioMonitorImage' src="/image/Portfolio/macbookImage.png" alt="" />
           {/* imageWrap의 ref를 사용하여 호버시 스크롤로 페이지이동 막기위함 */}
           {/* mouse over, out 이벤트로 useState를 변경!! onMouseEnter */}
-          <div ref={PortfolioPageImageWrap} onMouseEnter={()=>{setImageWrapHover(true)}} onMouseLeave={()=>{setImageWrapHover(false)}} className="PortfolioPageImageWrap"> {/* 보이는곳 */}
+          <div ref={PortfolioPageImageWrap} onMouseEnter={()=>{setImageWrapHover(true)}} onMouseLeave={()=>{setImageWrapHover(false)}}  className="PortfolioPageImageWrap"> {/* 보이는곳 */}
+            <div className="scrollGuideWrap">
+              <div className="mouseFormDiv"></div>
+            </div>
             <div className={`PortfolioPageImageSlider page${portfolioPageNumber}`}> {/* 움직이는곳 */}
               {
                 props.portfolioImageArray && props.portfolioImageArray.map((item, index)=>(
@@ -189,7 +192,7 @@ const Portfolio = (props) => {
                     <span className='portfolioNumberOfPeopleName'>개발 인원</span>
                     <span className='portfolioNumberOfPeopleText'>{projectNumberOfPeople[index]}</span>
                   </div>
-
+                
                   <div className="portfolioButtonWrap">
                     <div className="goToSiteButton">
                       {/* 경고메세지 없애기용 rel="noopener noreferrer" */}

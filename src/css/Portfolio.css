@@ -1,9 +1,11 @@
 .PortfolioContentsWrap{
   width: 100%;
-  margin-top: 70px;
+  margin-top: 40px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
+
+  flex-direction: row-reverse;
 }
 .PortfolioLeftMonitorSection{
   margin-top: 50px;
@@ -14,14 +16,16 @@
 .PortFolioMonitorImage{
   z-index: 5;
   position: absolute;
-  left: 20px;
+  left: -62px;
   top: 50px;
   width: 900px;
 
   pointer-events: none;
+
+  /* right: 20px; */
 }
 .PortfolioPageImageWrap{
-  margin: 85px 0px 0px 125px;
+  margin: 85px 0px 0px 40px;
   
   width: 692px;
   height: 381px;
@@ -31,6 +35,7 @@
     -ms-overflow-style: none; /* IE and Edge */
     scrollbar-width: none; /* Firefox */
   position: relative;
+
 }
   .PortfolioPageImageWrap::-webkit-scrollbar{ /* 크롬 */
     width: 0px;
@@ -84,6 +89,58 @@
   .PortfolioPageImageWrap:hover::before,.PortfolioPageImageWrap:hover::after{
     opacity: 0;
   }
+
+.scrollGuideWrap{
+  position: absolute;
+  z-index: 10;
+  left: 50%;
+  top: 50px;
+  transform: translate(-50%);
+
+  opacity: 1;
+  transition: 0.5s;
+}
+  .PortfolioPageImageWrap:hover .scrollGuideWrap{
+    opacity: 0;
+  }
+.mouseFormDiv{
+  width: 17px;
+  height: 30px;
+  border-radius: 10px;
+  background-color: transparent;
+  border: 1px solid white;
+
+  position: relative;
+}
+  .mouseFormDiv::after{
+    content: "";
+    position: absolute;
+    left: 50%;
+    top: 6px;
+    width: 5px;
+    height: 5px;
+    background-color: white;
+
+    transform: translate(-45%);
+
+    animation-name: wheelFormDivAnimation;
+    animation-duration: 2.0s;
+    animation-delay: 1s;
+    animation-iteration-count: infinite;
+  }
+@keyframes wheelFormDivAnimation {
+  0%{
+    transform: translate(-45%, 0%);
+  }
+  50%{
+    transform: translate(-45%, 90%);
+  }
+  100%{
+    transform: translate(-45%, 0%);
+  }
+}
+
+
 
 .PortfolioPageImageSlider{
   position: absolute;
@@ -141,9 +198,12 @@
   flex-direction: column;
   justify-content: flex-start;
   align-items: flex-start;
-  padding-left : 80px;
-  padding-right: 20px;
+  /* padding-left : 80px;
+  padding-right: 20px; */
   display: none;
+
+  padding-left : 60px;
+  padding-right: 30px;
 }
 .PortfolioProjectWrap.target{
   display: flex;
@@ -152,7 +212,7 @@
 .PortfolioProjectName{
   position: relative;
   align-self: center;
-  margin-right: 100px;
+  /* margin-right: 100px; */
 }
   .PortfolioProjectName::before{
     position: absolute;
@@ -258,9 +318,9 @@
 
 .pageButtonWrap{
   position: absolute;
-  left: 50%;
+  left: 150%;
   bottom:30px;
-  transform: translate(-50%, -50%);
+  transform: translate(-25%, -100%);
 
   display: flex;
   justify-content: space-between;
