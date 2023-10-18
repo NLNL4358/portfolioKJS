@@ -30,20 +30,16 @@ function App() {
         navigate("/")
         break;
       case 1:
-        navigate("/Epilogue")
-        // navigate("/About")
+        navigate("/About")
         break;
       case 2:
-        navigate("/Portfolio")
-        // navigate("/Skill")
+        navigate("/Skill")
         break;
       case 3:
-        navigate("/Skill")
-        // navigate("/Epilogue")
+        navigate("/Identity")
         break;
       case 4:
-        navigate("/About")
-        // navigate("/Portfolio")
+        navigate("/Portfolio")
         break;
     
       default:
@@ -81,7 +77,7 @@ function App() {
         <Route path='/' element={<Home setIndex={(index)=>{setIndex(index)}}></Home>}></Route>
         <Route path='/About' element={<About setIndex={(index)=>{setIndex(index)}}></About>}></Route>
         <Route path='/Skill' element={<MySkill setIndex={(index)=>{setIndex(index)}}></MySkill>}></Route>
-        <Route path='/Epilogue' element={<Epilogue setIndex={(index)=>{setIndex(index)}}></Epilogue>}></Route>
+        <Route path='/Identity' element={<Epilogue setIndex={(index)=>{setIndex(index)}}></Epilogue>}></Route>
         <Route path='/Portfolio' element={<Portfolio portfolioImageArray={portfolioImageArray} setIndex={(index)=>{setIndex(index)}}></Portfolio>}></Route>
       </Routes>
     </div>

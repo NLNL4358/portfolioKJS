@@ -39,7 +39,7 @@ const Epilogue = (props) => {
   },[])
 
   const goToPortfolio = () =>{
-    props.setIndex(2);
+    props.setIndex(4);
   }
 
   return (

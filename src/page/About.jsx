@@ -34,6 +34,11 @@ const About = (props) => {
       // },1000)
   },[])
 
+  const goToSkillPage = (event) =>{
+    event.preventDefault();
+    props.setIndex(2);
+  }
+
   return (
     <div ref={AboutRef} className='About contents_inner'>
       <div className="pageNameSection">
@@ -43,6 +48,11 @@ const About = (props) => {
       <div className="AboutContentsWrap">
         <div className="AboutLeftWrap">
           <img className='AboutLeftImage' src="/image/About/aboutMeImage.png" alt="" />
+          <div className="goToSkillWrap">
+            <h5 className='AboutGridTextName boldPretendard'>역량</h5>
+            <img className='AboutPointArrow' src="/image/Home/PointArrow.png" alt="" />
+            <button onClick={(event)=>(goToSkillPage(event))} className='AboutMoreButton'>보유 역량 확인</button>
+          </div>
         </div>
         <div className="AboutRightWrap">
           <div className="AboutGridWrap">

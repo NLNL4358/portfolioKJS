@@ -8,10 +8,10 @@ const SideComponent = (props) => {
   const navigate = useNavigate();
   const indexArray = [
     "Home",
-    "Epilogue",
-    "Portfolio",
-    "Skill",
     "About",
+    "Skill",
+    "Identity",
+    "Portfolio",
   ]
 
   const changeIndex = (event,index) =>{
