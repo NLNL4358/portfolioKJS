@@ -13,10 +13,19 @@
   padding-left: 150px;
   /* padding-top: 75px; */
   /* padding-top: 45px; */
-  padding-top: 100px;
+  padding-top: 140px;
 
   position: relative;
 
+}
+.AllSkillsWrap::before{
+  position: absolute;
+  content: "Yes, I Can! ";
+  z-index: 0;
+  left: 50%;
+  top: 98px;
+  transform: translate(-50%);
+  color: white;
 }
 
   /* .AllSkillsWrap::after{
@@ -54,6 +63,8 @@
 
     opacity: 0;
     transition: 0.2s;
+
+    z-index: 10;
   }
   .SkillCategory::before{
     position: absolute;
@@ -69,6 +80,8 @@
     
     opacity: 0;
     transition: 0.2s;
+
+    z-index: 15;
   }
   .SkillCategory:hover::after, .SkillCategory:hover::before{
     opacity: 1;
@@ -104,6 +117,43 @@
 
   justify-items: center;
   align-items: flex-start;
+
+  position: relative;
+}
+.SkillCategoryWrap::before, .SkillCategoryWrap::after{
+  position: absolute;
+  content: "";
+  background-image: url("/public/image/MySkill/maskingTape.png");
+
+  
+  width: 142px;
+  height: 45px;
+
+
+  transform: rotate(45deg);
+  z-index: 15;
+}
+.SkillCategoryWrap::before{
+  right: -10px;
+  top: 0;
+
+}
+.SkillCategoryWrap::after{
+  left: -10px;
+  bottom: -30px;
+}
+.SkillYellowNoteImageWrap{
+  position: absolute;
+  left: 0%;
+  top: 20px;
+  width: 1280px;
+  height: 800px;
+
+  z-index: -5;
+}
+.SkillYellowNoteImage{
+  width: 100%;
+  height: 100%;
 }
 
 .SkillCategory{
@@ -137,7 +187,7 @@
 .SkillWrap{
   padding: 35px 30px;
 }
-  .WebFrontend .SkillWrap, .Language .SkillWrap, .Library .SkillWrap, .Communication .SkillWrap, .VersionControl .SkillWrap{
+  .Language .SkillWrap, .Library .SkillWrap, .Communication .SkillWrap, .VersionControl .SkillWrap{
     display: grid;
     grid-template-columns: auto auto;
     grid-template-rows: auto auto;
@@ -147,12 +197,16 @@
     justify-content: center;
     align-items: center;
   }
-  .WebFrontend .SkillWrap img , .Language .SkillWrap img, .Library .SkillWrap img, .Communication .SkillWrap img{
+  
+  .Language .SkillWrap img, .Library .SkillWrap img, .Communication .SkillWrap img{
     width: 75px;
     height: auto;
   }
+  .WebFrontend .SkillWrap img{
+    height: 60px;
+  }
 
-  .Tool .SkillWrap{
+  .WebFrontend .SkillWrap, .Tool .SkillWrap{
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -175,4 +229,18 @@
 
 .SkillCategoryName{
   font-weight: bold;
+}
+
+.goToIdentity .SkillWrap{
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.goToIdentityText{
+  text-align: center;
+  padding: 0px 30px;
+}
+.goToIdentity::before{
+  content: "역량만큼이나 중요한 개발자로서 가치관 !\A저의 개발자로서의 가치관을 볼 수 있습니다.";
 }

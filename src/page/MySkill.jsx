@@ -39,6 +39,10 @@ const MySkill = (props) => {
     // },1000)
   },[])
 
+  const goToIdentityPage = (event) =>{
+    event.preventDefault();
+    props.setIndex(3);
+  }
 
 
   return (
@@ -48,13 +52,16 @@ const MySkill = (props) => {
       </div>
 
       <div className="AllSkillsWrap">
+        <div className="SkillYellowNoteImageWrap">
+            <img className="SkillYellowNoteImage" src="/image/MySkill/YellowNote.svg" alt="" />
+        </div>
         <div className="SkillCategoryWrap">
           <div className="SkillCategory WebFrontend">
             <h5 className='SkillCategoryName boldPretendard'>Web Frontend</h5>
             <div className="SkillWrap">
-              <img src="/image/MySkill/HTML_logo.png" alt="" />
-              <img src="/image/MySkill/CSS_logo.png" alt="" />
-              <img src="/image/MySkill/javascript_logo.png" alt="" />
+              <img src="/image/MySkill/HTML_logo.svg" alt="" />
+              <img src="/image/MySkill/CSS_logo.svg" alt="" />
+              <img src="/image/MySkill/javascript_logo.svg" alt="" />
             </div>
           </div>
           <div className="SkillCategory Tool">
@@ -65,13 +72,22 @@ const MySkill = (props) => {
               <img src="/image/MySkill/figma_logo.png" alt="" />
             </div>
           </div>
-          <div className="SkillCategory Language">
-            <h5 className='SkillCategoryName boldPretendard'>Language</h5>
+          <div className="SkillCategory goToIdentity">
+            <h5 className='SkillCategoryName boldPretendard'>My Identity</h5>
             <div className="SkillWrap">
-              <img src="/image/MySkill/CPlus_logo.png" alt="" />
-              <img src="/image/MySkill/CSharp_logo.png" alt="" />
+              <p className='goToIdentityText boldPretendard'>
+                {
+                `Please Check My Identity :)`
+                }
+              </p>
+              <img className='AboutPointArrow firstArrow' src="/image/About/AboutArrow.svg" alt="" />
+              <img className='AboutPointArrow secondArrow' src="/image/About/AboutArrow.svg" alt="" />
+              <img className='AboutPointArrow thirdArrow' src="/image/About/AboutArrow.svg" alt="" />
+
+              <button onClick={(event)=>(goToIdentityPage(event))} className='AboutMoreButton'>Identity 확인</button>
             </div>
           </div>
+          
           <div className="SkillCategory Library">
             <h5 className='SkillCategoryName boldPretendard'>Library</h5>
             <div className="SkillWrap">
@@ -91,6 +107,13 @@ const MySkill = (props) => {
             <div className="SkillWrap">
               <img src="/image/MySkill/Git_logo.png" alt="" />
               <img src="/image/MySkill/git-hub_logo.png" alt="" />
+            </div>
+          </div>
+          <div className="SkillCategory Language">
+            <h5 className='SkillCategoryName boldPretendard'>Language</h5>
+            <div className="SkillWrap">
+              <img src="/image/MySkill/CPlus_logo.png" alt="" />
+              <img src="/image/MySkill/CSharp_logo.png" alt="" />
             </div>
           </div>
         </div>

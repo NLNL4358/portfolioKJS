@@ -45,7 +45,7 @@ const Epilogue = (props) => {
   return (
     <div ref={EpilogueRef} className='Epilogue contents_inner'>
       <div className="pageNameSection">
-        <h1 className='pageName'>Epilogue</h1>
+        <h1 className='pageName'>Identity</h1>
       </div>
       <div className="EpilogueContentsWrap">
         <div className="EpilogueTopDOM">
