@@ -5,7 +5,7 @@
     min-width: calc( 1600px - (100vw - 100%) );
     width: 100%;
     /* max-height: 751px; */
-    min-height: 751px;
+    max-height: 751px;
   }
   :root{
     --h1-size: 3.0rem; 
@@ -31,6 +31,9 @@
 }
 .sideComponentNameWrap .sideComponentName{
   font-size: var(--h2-size);
+}
+.sideComponentBottomWrap{
+  margin-bottom: 30px;
 }
 
 
@@ -61,7 +64,7 @@
 
   /* About */
   .About .AboutContentsWrap{
-    margin-top: 70px;
+    margin-top: 40px;
   }
   .About .AboutGridWrap{
     margin-right: 70px;
@@ -78,27 +81,74 @@
   /* Skill */
   .MySkill .AllSkillsWrap{
     width: 1150px;  
-    height: 600px;
-    margin-top: 40px;
+    height: 610px;
+    margin-top: 20px;
     padding-left: 0px;
     padding-top: 25px;
+  }
+  .MySkill .AllSkillsWrap::before{
+    top: 53px;
+  }
+  .MySkill .SkillYellowNoteImageWrap{
+    width: 100%;
+    height: 100%;
+
+    overflow: hidden;
+  }
+  .MySkill .SkillYellowNoteImage{
+    width: 100%;
+    height: auto;
+  }
+  .MySkill .SkillCategory{
+    width: 240px;
   }
   .MySkill .SkillCategoryWrap{
     width: 950px;
     height: 500px;
     margin: auto;
+
+    margin-top: 65px;
   }
   .MySkill .SkillCategoryName{
     height: 50px;
   }
   .MySkill .SkillWrap{
-    padding: 25px 20px;
+    padding: 25px 10px;
+  }
+  .MySkill .WebFrontend .SkillWrap, .MySkill .Tool .SkillWrap{
+    gap: 15px;
+  }
+  .MySkill .WebFrontend .SkillWrap img{
+    height: 50px;
+  }
+  .MySkill .Language .SkillWrap, 
+  .MySkill .Library .SkillWrap, 
+  .MySkill .Communication .SkillWrap, 
+  .MySkill .VersionControl .SkillWrap{
+    column-gap: 25px;
+  }
+  
+  .MySkill .Tool .SkillWrap img{
   }
 
+  .MySkill .SkillCategoryWrap::before, .MySkill .SkillCategoryWrap::after{
+    width: 110.4px;
+    height: 35px;
+  }
+
+  .MySkill .SkillCategoryWrap::before{
+    right: 10px;
+  }
+
+  .MySkill .SkillCategoryWrap::after{
+    bottom: 0px;
+    left: 10px;
+  }
   /* Epilogue */
   .Epilogue .EpilogueContentsWrap{
+    width: 100%;
     height: auto;
-    margin-top: 50px;
+    margin-top: 30px;
   }
   .Epilogue .EpilogueTopDOM, .Epilogue .EpilogueBottomDOM{
     margin-left: 30px;
@@ -116,10 +166,19 @@
     font-size: 70px;
   }
   .Epilogue .size100{
-    font-size: 95px;
+    font-size: 90px;
   }
   .Epilogue .size120{
-    font-size: 110px;
+    font-size: 100px;
+  }
+
+  .Epilogue .goToPortfolioCursor,
+  .Epilogue .goToPortfolioCursorEffect{
+    width: 95px;
+    height: auto;
+  }
+  .Epilogue .goToPortfolioText{
+    right: -35%;
   }
 
 
@@ -180,5 +239,171 @@
     left: 150%;
     transform: translate(-75%, 50%);
     justify-content: center;
+  }
+}
+
+@media screen and (max-width : 1367px){
+  .inner{
+    /* 1366 * 768 해상도에선 웹 body의 높이가 688px */
+    min-width: calc( 1366px - (100vw - 100%) );
+    width: 100%;
+    /* max-height: 751px; */
+    min-height: 688px;
+  }
+
+  
+  :root{
+    --h1-size: 2.47rem; 
+    --h2-size: 1.87rem;
+    --h3-size: 1.6rem;
+    --h4-size: 1.4rem;
+    --h5-size: 1.2rem;
+    --p-size: 1.0rem;
+    --span-size: 0.87rem;
+  }
+
+  .pageName{
+    font-size: 50px;
+  }
+  .pageName::before{
+    bottom: -10px;
+  }
+
+  /* Home */
+  .Home .HomeLeftWrap h1{
+    font-size: 65px;
+  }
+
+  /* About */
+  .About .AboutLeftImage {
+    width: 200px;
+  }
+  .About .goToSkillWrap {
+    margin-top: 40px;
+  }
+  .About .AboutGridContents{
+    min-height: 125px;
+  }
+  .About .AboutContentsWrap{
+    margin-top: 60px;
+  }
+
+  /* Skill */
+  .MySkill .AllSkillsWrap {
+    width: 100%;
+    height: 550px;
+    margin: 0px;
+    margin-top: 10px;
+    padding: 0px;
+    padding-top: 60px;
+  }
+
+  .MySkill .SkillCategoryWrap{
+    margin-top: 0px;
+    width: 800px;
+    row-gap: 0px;
+
+    padding-top : 40px;
+  }
+
+  .MySkill .SkillYellowNoteImageWrap{    
+    width: 95%;
+    left: 50%;
+    transform: translate(-50%);
+  }
+  
+  .MySkill .WebFrontend .SkillWrap img {
+    height: 40px;
+  }
+  .MySkill .Tool .SkillWrap img {
+    height: 40px;
+  }
+  .MySkill .Language .SkillWrap img, .MySkill .Library .SkillWrap img, .MySkill .Communication .SkillWrap img {
+    width: 60px;
+  }
+  .MySkill .VersionControl .SkillWrap img:nth-of-type(1) {
+    height: 35px;
+  }
+  .MySkill .VersionControl .SkillWrap img:nth-of-type(2) {
+    height: 50px;
+  }
+  .MySkill .Language .SkillWrap, .MySkill .Library .SkillWrap, .MySkill .Communication .SkillWrap, .MySkill .VersionControl .SkillWrap {
+    row-gap: 0px;
+  }
+
+  .MySkill .AboutPointArrow{
+    height: 15px;
+  }
+  .MySkill .firstArrow{
+    margin-top: 15px;
+  }
+  .MySkill .thirdArrow{
+    margin-bottom: 15px;
+  }
+  .MySkill .AboutMoreButton{
+    width: 150px;
+    height: 40px;
+  }
+
+  .MySkill .SkillCategoryWrap::before {
+    top: 40px;
+    right: -10px;
+  }
+  .MySkill .SkillCategoryWrap::after {
+    bottom: 40px;
+    left: -20px;
+  }
+
+
+  /* Identity */
+  .Epilogue .EpilogueTextWrap {
+    padding-right: 20px;
+  }
+  .Epilogue .EpilogueContentsWrap{
+    margin-top: 20px;
+  }
+
+  .Epilogue .size30{
+    font-size: 24px;
+  }
+  .Epilogue .size50{
+    font-size: 45px;
+  }
+  .Epilogue .size60{
+    font-size: 52px;
+  }
+  .Epilogue .size80{
+    font-size: 64px;
+  }
+  .Epilogue .size100{
+    font-size: 85px;
+  }
+  .Epilogue .size120{
+    font-size: 90px;
+  }
+
+
+  /* Portfolio */
+
+  .Portfolio .PortfolioContentsWrap{
+    margin-top: 20px;
+  }
+
+  .Portfolio .PortfolioLeftMonitorSection{
+    margin-top: 50px;
+  }
+  .Portfolio .PortFolioMonitorImage{
+    width: 630px;
+    left : -100px;
+  }
+  .Portfolio .PortfolioPageImageWrap{
+    width: 484px;
+    height: 267px;
+    margin-top: 73px;
+
+    transform: translate(-48px);
+  }
+  .Portfolio .pageButtonWrap {
+    transform: translate(-85%,50%);
   }
 }

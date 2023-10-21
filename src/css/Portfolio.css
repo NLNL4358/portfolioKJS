@@ -1,6 +1,6 @@
 .PortfolioContentsWrap{
   width: 100%;
-  margin-top: 40px;
+  margin-top: 80px;
   display: flex;
   justify-content: space-between;
   align-items: flex-start;
@@ -8,7 +8,7 @@
   flex-direction: row-reverse;
 }
 .PortfolioLeftMonitorSection{
-  margin-top: 50px;
+  margin-top: 00px;
   width: 55%;
   height: 100%;
   position: relative;
@@ -319,7 +319,7 @@
 .pageButtonWrap{
   position: absolute;
   left: 150%;
-  bottom:30px;
+  bottom:80px;
   transform: translate(-25%, -100%);
 
   display: flex;

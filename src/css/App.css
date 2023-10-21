@@ -19,7 +19,8 @@
 .contents_inner{
   width: 81%;
   height: 100%;
-
+  
+  overflow-y: hidden;
 
   animation-name: contents_inner_appear;
   animation-duration: 1.5s;
