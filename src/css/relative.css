@@ -346,11 +346,11 @@
   }
 
   .MySkill .SkillCategoryWrap::before {
-    top: 40px;
-    right: -10px;
+    top: 45px;
+    right: -20px;
   }
   .MySkill .SkillCategoryWrap::after {
-    bottom: 40px;
+    bottom: 35px;
     left: -20px;
   }
 
