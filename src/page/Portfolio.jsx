@@ -87,13 +87,13 @@ const Portfolio = (props) => {
   ]
 
   const projectFunction = [
-    <span className='portfolioFunctionText'>`리액트의 <point3>Route</point3>를 이용하여 <point3>재랜더링</point3> 방식으로 페이지간 전환을<br/>구현하였고 컴포넌트 사용을 적극 활용했으며 <point4>네오플API</point4>를 활용하여 캐릭터 닉네임을<br/>입력하면 <point4>전적 검색</point4>이 가능하도록 기능을 구현했습니다.`</span>,
+    <span className='portfolioFunctionText'>`리액트의 <point3>Route</point3>를 이용하여 <point3>재랜더링</point3> 방식으로 페이지간 전환을<br/>구현하였고 컴포넌트 사용을 적극 활용했으며 <point4>네오플API</point4>를 활용하여 캐릭터 닉네임을 입력하면 <point4>전적 검색</point4>이 가능하도록 기능을 구현했습니다.`</span>,
     
     <span className='portfolioFunctionText'>`<point3>위치 Api</point3>를 이용하여 <point3>에버랜드의 지도</point3>를 모달창으로 구현하였고,<br/><point4>날씨 Api</point4>또한 사용하며 <point4>에버랜드 주변의 날씨</point4>를 확인 할 수 있습니다.`</span>,
 
-    <span className='portfolioFunctionText'>`Javascript의 라이브러리인 <point3>JQuery</point3>를 사용하여 예약에 필요한<br/><point3>캘린더를 구현</point3>하였고 <point4>Parallax Scroll</point4> 스타일을 사용하여 <point4>입체감</point4>을 주었습니다.<br/>또한 <point3>반응형 웹</point3>으로 구현하여 모바일 사이즈 경우 앱의 스타일을 살린 배치와<br/><point3>하단 Nav</point3>를 사용할 수 있도록 구현하였습니다.`</span>,
+    <span className='portfolioFunctionText'>`Javascript의 라이브러리인 <point3>JQuery</point3>를 사용하여 예약에 필요한<br/><point3>캘린더를 구현</point3>하였고 <point4>Parallax Scroll</point4> 스타일을 사용하여 <point4>입체감</point4>을 주었습니다. 또한, <point3>반응형 웹</point3>으로 구현하여 모바일 사이즈 경우 앱의 스타일을 살린 배치와 <point3>하단 Nav</point3>를 사용할 수 있도록 구현하였습니다.`</span>,
 
-    <span className='portfolioFunctionText'>`CSS를 이용한 DOM의 <point3>애니메이션과 반응형 웹</point3>을 구현하였고<br/>모바일 사이즈 경우 <point4>햄버거 버튼을 클릭해 반응형 메뉴</point4>가 나타나도록 배치하고<br/><point3>서브페이지</point3> 또한 제작하여 메인 페이지와 연결되도록 하였습니다.`</span>
+    <span className='portfolioFunctionText'>`CSS를 이용한 DOM의 <point3>애니메이션과 반응형 웹</point3>을 구현하였고<br/>모바일 사이즈 경우 <point4>햄버거 버튼을 클릭해 반응형 메뉴</point4>가 나타나도록 배치하고 <point3>서브페이지</point3> 또한 제작하여 메인 페이지와 연결되도록 하였습니다.`</span>
   ]
 
   const projectHavePage = [
@@ -197,7 +197,8 @@ const Portfolio = (props) => {
                     <div className="goToSiteButton">
                       {/* 경고메세지 없애기용 rel="noopener noreferrer" */}
                       <Link target="_blank" rel="noopener noreferrer" to={goToSiteUrl[index]}>
-                        사이트 바로가기
+                        <img src="/image/Portfolio/WebIcon.png" alt="" />
+                        Web Site
                       </Link>
                     </div>
                     <div className="goToGitHubButton">

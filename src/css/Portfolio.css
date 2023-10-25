@@ -239,22 +239,25 @@
   margin-top: 45px;
   margin-bottom: 20px;
 }
+.portfolioHavePageWrap{
 
+}
 .portfolioHavePageWrap, .portfolioFunctionTextWrap, .portfolioTechTextWrap, .portfolioPeriodWrap, .portfolioNumberOfPeopleWrap{
   width: 100%;
-  position: relative;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
 }
 
 .portfolioHavePageName, .portfolioFunctionName, .portfolioTechName, .portfolioPeriodName, .portfolioNumberOfPeopleName{
   font-weight: bold;
-  position: absolute;
-  left: 0;
-  top: 0;
+  display: inline-block;
+  width: 14%;
 }
 
 .portfolioHavePageText, .portfolioFunctionText, .portfolioTechText, .portfolioPeriodText, .portfolioNumberOfPeopleText{
-  margin-left: 80px;
-  width: 100%;
+  display: inline-block;
+  width: 86%;
 }
 .portfolioHavePageText>point3,.portfolioHavePageText>point4, .portfolioFunctionText>point3,.portfolioFunctionText>point4{
   font-size: var(--span-size);
@@ -315,6 +318,9 @@
   content: "check github";
 }
 
+.goToSiteButton a img{
+  width: 28px;
+}
 
 .pageButtonWrap{
   position: absolute;

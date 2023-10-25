@@ -3,7 +3,8 @@
   .inner{
     /* 1600 * 900 해상도에선 웹 body의 높이가 751px */
     min-width: calc( 1600px - (100vw - 100%) );
-    width: 100%;
+    /* width: 100%; */
+    width: calc(100vw - (100vw - 100%));
     /* max-height: 751px; */
     height: 100vh;
   }
@@ -65,7 +66,6 @@
   /* About */
   .About .AboutContentsWrap{
     margin-top: 40px;
-    overflow: hidden;
   }
   .About .AboutGridWrap{
     margin-right: 70px;
@@ -223,17 +223,14 @@
   }
 
   .Portfolio .portfolioButtonWrap{
-    bottom: 30px;
+    bottom: 60px;
   }
   .Portfolio .goToSiteButton, .Portfolio .goToGitHubButton{
     width: 150px;
     height: 40px;
     border-radius: 5px;
   }
-  .Portfolio .portfolioHavePageText, .Portfolio .portfolioFunctionText, .Portfolio .portfolioTechText, .Portfolio .portfolioPeriodText, .Portfolio .portfolioNumberOfPeopleText{
-    margin-left: 70px;
-  }
-
+ 
   .Portfolio .pageButtonWrap{
     /* left: -50%;
     transform: translate(-25%, 50%); */
