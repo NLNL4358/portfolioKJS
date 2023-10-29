@@ -122,6 +122,8 @@
 
   transition: 0.2s;
   position: relative;
+
+  padding: 15px 0px;
 }
   .HomeMoreButton:hover{
     background-color: var(--button-color2);
