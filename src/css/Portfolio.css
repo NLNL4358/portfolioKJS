@@ -237,7 +237,11 @@
 
 .PortfolioProjectExplanation{
   margin-top: 45px;
-  margin-bottom: 20px;
+  padding-bottom: 20px;
+
+  width: 100%;
+
+  border-bottom: 1px dotted var(--border-color1);
 }
 .portfolioHavePageWrap{
 

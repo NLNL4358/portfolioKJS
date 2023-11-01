@@ -223,7 +223,7 @@
   }
 
   .Portfolio .portfolioButtonWrap{
-    bottom: 60px;
+    bottom: 20px;
   }
   .Portfolio .goToSiteButton, .Portfolio .goToGitHubButton{
     width: 150px;
@@ -420,5 +420,9 @@
   }
   .Portfolio .pageButtonWrap {
     transform: translate(-85%,50%);
+  }
+
+  .Portfolio .portfolioButtonWrap{
+    bottom: 60px;
   }
 }
